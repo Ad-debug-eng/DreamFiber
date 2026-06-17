@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dream IPTV & Internet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        html, body { overflow-x: hidden; }
+        .page-header {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(180deg, #fef2f8 0%, var(--bg-white) 100%);
+        }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .contact-container {
+            display: flex; gap: 4rem; padding: 4rem 20px;
+            max-width: 1000px; margin: 0 auto; box-sizing: border-box;
+        }
+        .contact-info { flex: 1; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
+        .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .info-item ion-icon { font-size: 1.8rem; color: var(--primary); background: rgba(200, 32, 138, 0.1); padding: 0.5rem; border-radius: 50%; }
+        .contact-form { flex: 1; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-weight: 500; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 1rem; background: var(--bg-white);
+            border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-main);
+            font-family: inherit; transition: var(--transition-smooth); box-sizing: border-box;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(200, 32, 138, 0.1);
+        }
+        @media (max-width: 768px) { .contact-container { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; letter-spacing: -1px;" class="text-gradient">DREAM</span>
+                    <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; color: #111827;">IPTV & INTERNET</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="enterprise-solution.html">Enterprise Solution</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn ">Home Broadband <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="broadband.html">Broadband</a>
+                        <a href="broadband-ott.html">Broadband + OTT</a>
+                    </div>
+                </div>
+                <a href="ott.html">OTT</a>
+                <a href="iptv.html">IPTV</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn active">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="javascript:void(0)" onclick="alert('FAQs coming soon!')">FAQs (Quick Answer)</a>
+                        <a href="contact.html">Contact Us (WhatsApp or Call)</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-actions">
+                <a href="javascript:void(0)" onclick="alert('Under Construction')" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="https://wa.me/918788536698?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
+                    <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
+                </a>
+            </div>
+            <button class="mobile-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="text-gradient">Get in Touch</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">
+                Ready to upgrade your internet? Have questions about our OTT packages? Reach out to us.
+            </p>
+        </div>
+    </section>
+
+    <section class="section container contact-container">
+        <div class="contact-info">
+            <h2>Let's Talk <span class="text-gradient">Connectivity</span></h2>
+            <p>Our local support team is available 24/7 to help you choose the right package, schedule installation, or provide technical support. The fastest way to reach us is via WhatsApp.</p>
+            <a href="https://wa.me/918788536698?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-primary" style="margin-bottom: 2rem;">
+                <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem; font-size: 1.2rem;"></ion-icon> Chat on WhatsApp
+            </a>
+            <div class="info-item"><ion-icon name="location-outline"></ion-icon><span>Chakan, Pune</span></div>
+            <div class="info-item"><ion-icon name="call-outline"></ion-icon><span>+91 87885 36698 / +91 92281 72558</span></div>
+        </div>
+        
+        <div class="card contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name <span style="color: red;">*</span></label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div>
+                    <label style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #374151; margin-bottom: 0.5rem;">Contact Number <span style="color: red;">*</span></label>
+                    <input type="tel" id="entPhone" value="+91 " maxlength="14" placeholder="e.g. +91 87885 36698" style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 0.875rem;" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="service">Interested Service <span style="color: red;">*</span></label>
+                    <select id="service" required style="appearance: auto;">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Internet + OTT and/or IPTV">Internet + OTT and/or IPTV</option>
+                        <option value="Partnership">Partnership</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / Address for Feasibility <span style="color: red;">*</span></label>
+                    <textarea id="message" rows="4" placeholder="How can we help you? Please include your street name for quick availability check." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; margin-bottom: 1rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; line-height: 1; letter-spacing: -1px; color: #ffffff;">DREAM</span>
+                    <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 2px; color: #9ca3af;">IPTV & INTERNET</span>
+                </a>
+                <p>Reliable fiber broadband with fast installation and direct support. Internet, IPTV and OTT bundles in your area.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="broadband.html">Fiber Internet Plans</a>
+                <a href="broadband-ott.html">OTT Bundles</a>
+                <a href="iptv.html">IPTV Channels</a>
+                <a href="enterprise-solution.html">Business Internet</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Support</h4>
+                <p>Call: 8788536698, 9228172558</p>
+                <p>WhatsApp Number: 9272162704</p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Dream IPTV & Internet. All Rights Reserved.</p></div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

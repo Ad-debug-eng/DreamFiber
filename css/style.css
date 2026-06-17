@@ -1,0 +1,1410 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    /* Brand Color Palette from Logo */
+    --primary: #C8208A; /* Magenta/Pink */
+    --secondary: #6A2B9B; /* Deep Purple */
+    --accent: #E53E3E; /* Red accent for alerts/badges */
+    
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-gray: #f3f4f6;
+    
+    /* Typography */
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --text-light: #6b7280;
+    
+    /* Effects */
+    --border-light: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-main);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography Classes */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Cards */
+.card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #b5197a, #5b2485);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 0;
+    background: var(--bg-white);
+    transition: var(--transition-smooth);
+    border-bottom: 1px solid transparent;
+}
+
+header.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links, .nav-actions {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Fixed mobile menu classes */
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(253, 242, 248, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-light);
+        z-index: 999;
+    }
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+    position: relative;
+    padding: 12rem 0 8rem;
+    background: radial-gradient(circle at top right, rgba(200, 32, 138, 0.05), transparent),
+                radial-gradient(circle at bottom left, rgba(106, 43, 155, 0.05), transparent),
+                linear-gradient(180deg, #fffcfd 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 680px;
+}
+
+.hero-side-image {
+    text-align: right;
+}
+
+.hero-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.hero-info-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.hero-info-card.wide {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.hero-info-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.hero-info-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.hero-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.hero-stat-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0.7rem;
+    text-align: left;
+    min-height: 92px;
+}
+
+.hero-stat-card strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.hero-stat-card span {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(200, 32, 138, 0.1);
+    color: var(--primary);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: var(--text-main);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+/* =========================================
+   Features / Content Section
+   ========================================= */
+.section {
+    padding: 5rem 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: left;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    background: rgba(200, 32, 138, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   Showcase Section (All Entertainment)
+   ========================================= */
+.showcase-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.showcase-content {
+    flex: 1;
+}
+
+.showcase-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.showcase-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    margin-bottom: 2.5rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.feature-list ion-icon {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.feature-list div h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.feature-list div p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.showcase-image {
+    flex: 1;
+    position: relative;
+}
+
+.showcase-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 992px) {
+    .showcase-container {
+        flex-direction: column;
+    }
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background: var(--text-main);
+    color: var(--bg-white);
+    padding: 4rem 0 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand p {
+    color: #9ca3af;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--bg-white);
+}
+
+.footer-links a {
+    display: block;
+    color: #9ca3af;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--bg-white);
+}
+
+.footer-contact p {
+    color: #9ca3af;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #9ca3af;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   Pricing Section (shared: index + services)
+   ========================================= */
+.tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 0 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.65rem 1.8rem;
+    border-radius: 50px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    border-color: transparent;
+}
+
+.plan-section { display: none; }
+.plan-section.active { display: block; }
+
+.duration-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.dur-btn {
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    border: 1.5px solid var(--border-light);
+    background: #fff;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.dur-btn.active {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    background: rgba(106, 43, 155, 0.07);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    border: none;
+    border-radius: 30px;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    background: #fff;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    box-shadow: 0 24px 60px 0 rgba(15,23,42,0.12);
+    transform: translateY(-8px);
+}
+
+.pricing-card.best {
+    box-shadow: 0 0 0 3px var(--primary), 0 24px 60px 0 rgba(15,23,42,0.12);
+}
+
+.best-badge {
+    position: absolute;
+    top: -16px;
+    right: 2rem;
+    transform: none;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(200,32,138,0.3);
+}
+
+.plan-speed {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.plan-type {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-gray);
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.price-per-month {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.price-per-month sup {
+    font-size: 1.4rem;
+    -webkit-text-fill-color: var(--primary);
+    top: -1em;
+}
+
+.price-per-month-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.price-total {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.plan-features {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 2rem;
+    margin-top: auto; /* Pushes features to bottom of flex container */
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+}
+
+.plan-features li:last-child {
+    margin-bottom: 0;
+}
+
+.plan-features ion-icon {
+    color: var(--primary);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.ott-logos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.ott-logo {
+    padding: 0.3rem 0.8rem;
+    border: 1.5px solid var(--border-light);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-whatsapp-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #16a34a; /* WhatsApp Green */
+    color: white;
+    border-radius: 16px;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(22,163,74,0.3);
+    transition: var(--transition-smooth);
+}
+
+.btn-whatsapp-cta ion-icon {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.btn-whatsapp-cta:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(22,163,74,0.4);
+    color: white;
+}
+
+.note-text {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-top: 1rem;
+}
+
+/* Office CTA (services page) */
+.office-cta {
+    background: linear-gradient(135deg, #fef2f8, #f3e8ff);
+    border: 1px solid rgba(200, 32, 138, 0.15);
+    border-radius: 30px;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+}
+
+.office-cta h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.office-cta p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Simple pricing tables */
+.simple-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}
+
+.simple-table thead tr {
+    background: linear-gradient(135deg, #fce7f3, #f3e8ff);
+}
+
+.simple-table th,
+.simple-table td {
+    padding: 0.9rem 0.8rem;
+    border: 1px solid #e5e7eb;
+    font-size: 0.92rem;
+}
+
+.simple-table th {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: #374151;
+}
+
+.simple-table td {
+    color: #4b5563;
+    vertical-align: middle;
+}
+
+.simple-table .left {
+    text-align: left;
+}
+
+.simple-table .center {
+    text-align: center;
+}
+
+.best-seller-row td {
+    background: linear-gradient(180deg, #fff7ed, #fffbeb);
+}
+
+.best-seller-tag {
+    display: inline-block;
+    margin-left: 0.45rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    vertical-align: middle;
+}
+
+.price-best {
+    font-weight: 800;
+    color: #b91c1c;
+}
+
+.price-cell-total {
+    display: block;
+    font-weight: 800;
+    color: #111827;
+    font-size: 0.98rem;
+    line-height: 1.1;
+}
+
+.price-cell-monthly {
+    display: inline-block;
+    margin-top: 0.35rem;
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #6b21a8;
+    background: #f3e8ff;
+}
+
+.ott-logos-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+}
+
+.ott-pill {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.ott-logo-img {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+.business-fiber-banner {
+    margin: 0 auto 2rem;
+    padding: 1.1rem 1.2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(106, 43, 155, 0.2);
+    background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+    color: #312e81;
+    text-align: center;
+    font-weight: 600;
+}
+
+.business-fiber-banner strong {
+    color: #7e22ce;
+}
+
+.ott-hub {
+    padding: 2.8rem 0 2.2rem;
+    background: linear-gradient(180deg, #fcfcff, #f8fafc);
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ott-marquee {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.ott-track {
+    display: flex;
+    width: max-content;
+    animation: ott-scroll 28s linear infinite;
+}
+
+.ott-marquee:hover .ott-track {
+    animation-play-state: paused;
+}
+
+.ott-item {
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    border-right: 1px solid #f3f4f6;
+}
+
+@keyframes ott-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.ott-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+}
+
+.ott-logo-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 95px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 0.65rem;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.ott-logo-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
+}
+
+.ott-logo-tile img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.ott-logo-tile span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.4rem;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-side-image {
+        text-align: left;
+    }
+    .hero-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-info-card.wide {
+        grid-column: span 1;
+        text-align: left;
+    }
+    .hero-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .simple-table th,
+    .simple-table td {
+        padding: 0.65rem 0.5rem;
+        font-size: 0.82rem;
+    }
+    .price-cell-total { font-size: 0.9rem; }
+    .price-cell-monthly { font-size: 0.68rem; }
+    .ott-logo-img {
+        width: 22px;
+        height: 22px;
+    }
+    .ott-logos-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .ott-logo-tile img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* OTT Krishii Table Styles */
+.ott-krishii-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.ott-krishii-table thead tr {
+    background: #5b9bd5;
+    color: #fff;
+}
+.ott-krishii-table th {
+    padding: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 1px solid #4a8bc2;
+    text-align: center;
+}
+.ott-krishii-table td {
+    padding: 1.2rem;
+    border: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+.ott-krishii-table .plan-col {
+    background: #e9f2fb;
+    text-align: center;
+    width: 20%;
+}
+.ott-krishii-table .plan-col h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+}
+.ott-krishii-table .ott-col {
+    background: #fdfdfd;
+    text-align: center;
+}
+.ott-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+.ott-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    width: 65px;
+}
+.ott-app img, .ott-app .ott-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff;
+}
+.ott-app .ott-placeholder {
+    background: linear-gradient(135deg, #1f2937, #374151);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    padding: 2px;
+}
+.ott-app span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.1;
+    text-align: center;
+}
+.ott-live-text {
+    font-size: 0.95rem;
+    color: #111;
+    margin-top: 0.5rem;
+}
+.ott-dropdown {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+.ott-dropdown.active {
+    display: block;
+}
+.ott-toggle-btn {
+    background: #eff6ff;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+}
+.ott-toggle-btn:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+header.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Navigation Dropdowns */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-white);
+    min-width: 220px;
+    box-shadow: var(--shadow-lg);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    z-index: 1001;
+    border: 1px solid var(--border-light);
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+.nav-dropdown-content > a,
+.nav-sub-dropdown > a {
+    color: var(--text-main) !important;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+.nav-dropdown-content > a:hover,
+.nav-sub-dropdown:hover > a {
+    background-color: var(--bg-light);
+    color: var(--primary) !important;
+}
+
+.nav-sub-dropdown {
+    position: relative;
+}
+
+.nav-sub-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--bg-white);
+    min-width: 200px;
+    box-shadow: var(--shadow-lg);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    z-index: 1002;
+    border: 1px solid var(--border-light);
+}
+
+.nav-sub-dropdown:hover .nav-sub-dropdown-content {
+    display: block;
+}
+
+.nav-sub-dropdown-content a {
+    color: var(--text-main) !important;
+    padding: 0.6rem 1.5rem;
+    display: block;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
+
+.nav-sub-dropdown-content a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary) !important;
+}
+
+/* Make header wider to avoid congestion */
+header .container.nav-container {
+    max-width: 98% !important;
+    padding: 0 1% !important;
+}
+
+/* IPTV Section Styles */
+.iptv-section {
+    background: #0f172a;
+    background-image: radial-gradient(#1e293b 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 5rem 0;
+    color: #fff;
+    margin-top: 3rem;
+    border-radius: 20px;
+}
+
+.iptv-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.iptv-header h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.iptv-header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.iptv-controls {
+    background: #fff;
+    border-radius: 50px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.iptv-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.iptv-tab {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.iptv-tab.active {
+    background: #1e293b;
+    color: #fff;
+}
+
+.iptv-tab:hover:not(.active) {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.iptv-search {
+    position: relative;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.iptv-search input {
+    width: 100%;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    border-radius: 50px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.iptv-search input:focus {
+    border-color: #3b82f6;
+}
+
+.iptv-search ion-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.2rem;
+}
+
+.iptv-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.iptv-channels-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.iptv-channel {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.iptv-channel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.iptv-channel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.k-plan-speed {
+    color: #000000 !important;
+    font-size: 1.35rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-style: italic !important;
+    margin-top: 0.2rem !important;
+}
+
+/* Background scroll lock for mobile menu */
+body.menu-open {
+    overflow: hidden;
+}

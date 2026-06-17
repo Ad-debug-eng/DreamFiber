@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans & Pricing | Dream IPTV & Internet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Page Header */
+        .page-header {
+            padding: 9rem 0 3rem;
+            text-align: center;
+            background: linear-gradient(180deg, #fef2f8 0%, #fff 100%);
+        }
+        .page-header h1 { font-size: 3rem; margin-bottom: 0.75rem; }
+
+        /* Tab Toggle */
+        .krishi-tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        .k-tab-bar {
+            display: flex;
+            background: #f1f5f9;
+            padding: 0.35rem;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+        }
+        .k-tab-btn {
+            padding: 0.65rem 2rem;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            color: #475569;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .k-tab-btn.active {
+            background: linear-gradient(135deg, #a855f7, #db2777);
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(219, 39, 119, 0.2);
+        }
+
+        .plan-section { display: none; }
+        .plan-section.active { display: block; }
+
+        /* Pricing Grid */
+        .krishi-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            .krishi-cards-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1200px) {
+            .krishi-cards-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .k-card {
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: transform 0.2s;
+        }
+        .k-card:hover { transform: translateY(-5px); }
+        .k-card-header { padding: 1.5rem; border-bottom: none; }
+        .k-card-title { margin-bottom: 0.5rem; display: flex; align-items: flex-start; justify-content: space-between; }
+        .k-title-wrap { display: flex; flex-direction: column; }
+        .k-plan-name { color: #111827; font-size: 1.8rem; font-family: 'Outfit', sans-serif; font-weight: 800; line-height: 1.2; }
+        .k-plan-speed { color: #000000; font-size: 1.35rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-style: italic; margin-top: 0.2rem; }
+        
+        .k-best-seller {
+            background: #f97316;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .k-card-subtitle { color: #6b7280; font-size: 0.95rem; margin-bottom: 1.5rem; font-weight: 500; }
+        .k-badges { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .k-badge { padding: 0.4rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; border: 1px solid transparent; background: transparent; }
+        .k-badge-speed { color: #059669; border-color: #a7f3d0; background: #ecfdf5;}
+        .k-badge-data { color: #2563eb; border-color: #bfdbfe; background: #eff6ff;}
+        .k-badge-ott { color: #374151; border-color: #e5e7eb; background: #f9fafb; }
+        .k-badge-tv { color: #b91c1c; border-color: #fecaca; background: #fef2f2; }
+        .k-note { border-left: 3px solid #10b981; padding: 1.2rem; color: #4b5563; font-size: 0.85rem; background: #f8fafc; border-radius: 4px; font-weight: 500; }
+        .k-card-body { padding: 0 1.5rem 1.5rem 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;}
+        
+        /* OTT Styles */
+        .k-ott-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .k-ott-title { color: #6b7280; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .k-ott-bundle-text { color: #1d4ed8; font-size: 0.75rem; font-weight: 700; }
+        .k-ott-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .k-ott-icon { width: 46px; height: 46px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e5e7eb; }
+        .k-ott-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .k-ott-icon span { font-size: 0.5rem; color: #111827; font-weight: 700; text-align: center; line-height: 1.1; padding: 2px; }
+        .k-more-btn { width: 46px; height: 46px; border-radius: 10px; background: #eff6ff; color: #1d4ed8; border: 1px dashed #93c5fd; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; }
+        .k-more-btn:hover { background: #dbeafe; }
+        .k-dropdown { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #e5e7eb; }
+        .k-dropdown.active { display: block; }
+        
+        .k-card-footer { padding: 1.5rem; border-top: 1px solid #f3f4f6; background: #fafafa; }
+        .k-actions { display: flex; gap: 0.8rem; }
+        .k-btn { flex: 1; text-align: center; padding: 0.7rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; transition: all 0.2s; }
+        .k-btn-new { background: #10b981; color: #fff; border: none; }
+        .k-btn-new:hover { background: #059669; }
+        .k-btn-exist { background: #fff; color: #1d4ed8; border: 1px solid #1d4ed8; }
+        .k-btn-exist:hover { background: #eff6ff; }
+
+        /* Premium Card Styles */
+        .k-card-premium {
+            border: 2px solid #db2777;
+            box-shadow: 0 10px 30px -5px rgba(219, 39, 119, 0.2);
+        }
+
+        /* Office CTA */
+        .office-cta {
+            background: linear-gradient(135deg, #fef2f8, #f3e8ff);
+            border: 1.5px solid rgba(219,39,119,0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .office-cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .office-cta p { color: #6b7280; max-width: 500px; margin: 0 auto 2rem; }
+        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;">
+                    <span style="font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;line-height:1;letter-spacing:-1px;" class="text-gradient">DREAM</span>
+                    <span style="font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:2px;color:#111827;">IPTV & INTERNET</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="enterprise-solution.html">Enterprise Solution</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn active">Home Broadband <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="broadband.html">Broadband</a>
+                        <a href="broadband-ott.html">Broadband + OTT</a>
+                    </div>
+                </div>
+                <a href="ott.html">OTT</a>
+                <a href="iptv.html">IPTV</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn ">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="javascript:void(0)" onclick="alert('FAQs coming soon!')">FAQs (Quick Answer)</a>
+                        <a href="contact.html">Contact Us (WhatsApp or Call)</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-actions">
+                <a href="javascript:void(0)" onclick="alert('Under Construction')" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
+                    <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
+                </a>
+            </div>
+            <button class="mobile-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="text-gradient">Plans & Pricing</h1>
+            <p style="color:#6b7280;max-width:600px;margin:.75rem auto 0;font-size:1.1rem;">
+                Home user pricing with clear monthly savings. Free installation on all plans.
+            </p>
+            <div style="margin-top: 1rem; margin-bottom: -1.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem; color: #6b7280; font-weight: 600; font-family: 'Inter', sans-serif;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: #fff; padding: 0.5rem 1rem; border-radius: 50px; border: 1.5px solid #e5e7eb; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+                    <ion-icon name="tv-outline" style="font-size: 1.2rem; color: #db2777;"></ion-icon>
+                    <ion-icon name="tablet-portrait-outline" style="font-size: 1.2rem; color: #db2777;"></ion-icon>
+                    <ion-icon name="phone-portrait-outline" style="font-size: 1.2rem; color: #db2777;"></ion-icon>
+                    <span style="font-size: 0.9rem;">Watch on TV, Tablet and mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 1500px; padding: 0 2rem;">
+
+            <div class="business-fiber-banner" style="margin-bottom: 2rem; text-align: center; background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; color: #334155;">
+                <strong>Business / Office Fiber:</strong> Dedicated office fiber, static IP and leased line plans are available. Contact us directly on WhatsApp or call for custom pricing.
+            </div>
+
+            <div class="krishi-tabs-container">
+                <div class="k-tab-bar">
+                    <button class="k-tab-btn active" id="btn-tab-broadband" onclick="switchMainTab('broadband')">Broadband</button>
+                    <button class="k-tab-btn" id="btn-tab-broadband-ott" onclick="switchMainTab('broadband-ott')">Broadband + OTT</button>
+                </div>
+            </div>
+
+            <div id="section-broadband" class="plan-section active">
+                <div class="krishi-cards-grid">
+                    
+                    <div class="k-card">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Mini</span>
+                                    <span class="k-plan-speed">50 Mbps</span>
+                                </div>
+                            </h2>
+                            <p class="k-card-subtitle">Starter plan for basic use</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">50 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-note">
+                                Smart TV or multi-device homes should choose a higher speed.
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Mini+50 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="k-card">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Basic</span>
+                                    <span class="k-plan-speed">100 Mbps</span>
+                                </div>
+                                <span class="k-best-seller">BEST SELLER</span>
+                            </h2>
+                            <p class="k-card-subtitle">Standard streaming & browsing</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">100 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-note">
+                                Ideal for small families, smooth HD streaming on multiple devices.
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Basic+100 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="k-card">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Standard</span>
+                                    <span class="k-plan-speed">200 Mbps</span>
+                                </div>
+                            </h2>
+                            <p class="k-card-subtitle">High-speed family entertainment</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">200 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-note">
+                                Recommended for families who want smooth multi-screen streaming without buffering.
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Standard+200 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="k-card k-card-premium">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Premium</span>
+                                    <span class="k-plan-speed">300 Mbps</span>
+                                </div>
+                            </h2>
+                            <p class="k-card-subtitle">Premium streaming & gaming</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">300 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-note">
+                                Ideal for Smart TV, WFH, online classes and high-speed downloading.
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Premium+300 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section-broadband-ott" class="plan-section">
+                <div class="krishi-cards-grid">
+                    
+                    <div class="k-card">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Mini</span>
+                                    <span class="k-plan-speed">50 Mbps</span>
+                                </div>
+                            </h2>
+                            <p class="k-card-subtitle">Starter plan with OTT bundles</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">50 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                                <span class="k-badge k-badge-tv">450+ LIVE TV Channels</span>
+                                <span class="k-badge k-badge-ott">21 OTT apps</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-ott-header">
+                                <div class="k-ott-title">MAIN OTT APPS</div>
+                                <div class="k-ott-bundle-text">Dream bundle</div>
+                            </div>
+                            <div class="k-ott-grid">
+                                <div class="k-ott-icon"><img src="assets/ott/ott-hotstar.jpg" alt="JioHotstar" onerror="this.outerHTML='<span>JioHotstar</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-zee5.png" alt="ZEE5" onerror="this.outerHTML='<span>ZEE5</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-sonyliv.png" alt="SonyLIV" onerror="this.outerHTML='<span>SonyLIV</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-discovery.png" alt="Discovery+" onerror="this.outerHTML='<span>Discovery+</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-fancode.png" alt="Fancode" onerror="this.outerHTML='<span>Fancode</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-jiosaavn.webp" alt="Jio Saavn" onerror="this.outerHTML='<span>Jio Saavn</span>'"></div>
+                                <button class="k-more-btn" onclick="toggleOtt(this)">+15</button>
+                            </div>
+                            <div class="k-dropdown">
+                                <div class="k-ott-grid">
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-ahatamil.png" alt="Aha Tamil" onerror="this.outerHTML='<span>Aha Tamil</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chaupal.jpg" alt="Chaupal" onerror="this.outerHTML='<span>Chaupal</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-dangalplay.jpg" alt="Dangal Play" onerror="this.outerHTML='<span>Dangal Play</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-etvwin.png" alt="ETV Win" onerror="this.outerHTML='<span>ETV Win</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-hungama.png" alt="Hungama" onerror="this.outerHTML='<span>Hungama</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-kancchalannka.jpg" alt="Kanccha Lannka" onerror="this.outerHTML='<span>Kanccha<br>Lannka</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-omtv.jpg" alt="OM TV" onerror="this.outerHTML='<span>OM TV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-rajtv.png" alt="Raj DigitalTV" onerror="this.outerHTML='<span>Raj DigitalTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shemaroome.png" alt="Shemaroo" onerror="this.outerHTML='<span>Shemaroo</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shorts.png" alt="Shorts Tv" onerror="this.outerHTML='<span>Shorts Tv</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shucaefilm.jpg" alt="Shucae Flim" onerror="this.outerHTML='<span>Shucae<br>Flim</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-stage.png" alt="Stage" onerror="this.outerHTML='<span>Stage</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-sunnxt.png" alt="SunNXT" onerror="this.outerHTML='<span>SunNXT</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-travelxp.png" alt="TravelXP" onerror="this.outerHTML='<span>TravelXP</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-waves.jpg" alt="Waves" onerror="this.outerHTML='<span>Waves</span>'"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband+%2B+OTT+Mini+50 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="k-card">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Basic</span>
+                                    <span class="k-plan-speed">100 Mbps</span>
+                                </div>
+                                <span class="k-best-seller">BEST SELLER</span>
+                            </h2>
+                            <p class="k-card-subtitle">Standard streaming & browsing</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">100 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                                <span class="k-badge k-badge-tv">450+ LIVE TV Channels</span>
+                                <span class="k-badge k-badge-ott">24 OTT apps</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-ott-header">
+                                <div class="k-ott-title">MAIN OTT APPS</div>
+                                <div class="k-ott-bundle-text">Dream bundle</div>
+                            </div>
+                            <div class="k-ott-grid">
+                                <div class="k-ott-icon"><img src="assets/ott/ott-prime.png" alt="Amazon" onerror="this.outerHTML='<span>Amazon<br>(Lite)</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-hotstar.jpg" alt="JioHotstar" onerror="this.outerHTML='<span>JioHotstar</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-zee5.png" alt="ZEE5" onerror="this.outerHTML='<span>ZEE5</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-sonyliv.png" alt="SonyLIV" onerror="this.outerHTML='<span>SonyLIV</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-discovery.png" alt="Discovery+" onerror="this.outerHTML='<span>Discovery+</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-fancode.png" alt="Fancode" onerror="this.outerHTML='<span>Fancode</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-jiosaavn.webp" alt="Jio Saavn" onerror="this.outerHTML='<span>Jio Saavn</span>'"></div>
+                                <button class="k-more-btn" onclick="toggleOtt(this)">+17</button>
+                            </div>
+                            <div class="k-dropdown">
+                                <div class="k-ott-grid">
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-ahatamil.png" alt="Aha Tamil" onerror="this.outerHTML='<span>Aha Tamil</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chanajor.png" alt="Chana Jor" onerror="this.outerHTML='<span>Chana Jor</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chaupal.jpg" alt="Chaupal" onerror="this.outerHTML='<span>Chaupal</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-dangalplay.jpg" alt="Dangal Play" onerror="this.outerHTML='<span>Dangal Play</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-distrotv.jpg" alt="DistroTV" onerror="this.outerHTML='<span>DistroTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-etvwin.png" alt="ETV Win" onerror="this.outerHTML='<span>ETV Win</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-hungama.png" alt="Hungama" onerror="this.outerHTML='<span>Hungama</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-kancchalannka.jpg" alt="Kanccha Lannka" onerror="this.outerHTML='<span>Kanccha<br>Lannka</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-omtv.jpg" alt="OM TV" onerror="this.outerHTML='<span>OM TV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-rajtv.png" alt="Raj DigitalTV" onerror="this.outerHTML='<span>Raj DigitalTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shemaroome.png" alt="Shemaroo" onerror="this.outerHTML='<span>Shemaroo</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shorts.png" alt="Shorts Tv" onerror="this.outerHTML='<span>Shorts Tv</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shucaefilm.jpg" alt="Shucae Flim" onerror="this.outerHTML='<span>Shucae<br>Flim</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-stage.png" alt="Stage" onerror="this.outerHTML='<span>Stage</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-sunnxt.png" alt="SunNXT" onerror="this.outerHTML='<span>SunNXT</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-travelxp.png" alt="TravelXP" onerror="this.outerHTML='<span>TravelXP</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-waves.jpg" alt="Waves" onerror="this.outerHTML='<span>Waves</span>'"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband+%2B+OTT+Basic+100 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="k-card">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Standard</span>
+                                    <span class="k-plan-speed">200 Mbps</span>
+                                </div>
+                            </h2>
+                            <p class="k-card-subtitle">High-speed family entertainment</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">200 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                                <span class="k-badge k-badge-tv">450+ LIVE TV Channels</span>
+                                <span class="k-badge k-badge-ott">24 OTT apps</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-ott-header">
+                                <div class="k-ott-title">MAIN OTT APPS</div>
+                                <div class="k-ott-bundle-text">Dream bundle</div>
+                            </div>
+                            <div class="k-ott-grid">
+                                <div class="k-ott-icon"><img src="assets/ott/ott-prime.png" alt="Amazon" onerror="this.outerHTML='<span>Amazon<br>(Lite)</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-hotstar.jpg" alt="JioHotstar" onerror="this.outerHTML='<span>JioHotstar</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-zee5.png" alt="ZEE5" onerror="this.outerHTML='<span>ZEE5</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-sonyliv.png" alt="SonyLIV" onerror="this.outerHTML='<span>SonyLIV</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-discovery.png" alt="Discovery+" onerror="this.outerHTML='<span>Discovery+</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-fancode.png" alt="Fancode" onerror="this.outerHTML='<span>Fancode</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-jiosaavn.webp" alt="Jio Saavn" onerror="this.outerHTML='<span>Jio Saavn</span>'"></div>
+                                <button class="k-more-btn" onclick="toggleOtt(this)">+17</button>
+                            </div>
+                            <div class="k-dropdown">
+                                <div class="k-ott-grid">
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-ahatamil.png" alt="Aha Tamil" onerror="this.outerHTML='<span>Aha Tamil</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chanajor.png" alt="Chana Jor" onerror="this.outerHTML='<span>Chana Jor</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chaupal.jpg" alt="Chaupal" onerror="this.outerHTML='<span>Chaupal</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-dangalplay.jpg" alt="Dangal Play" onerror="this.outerHTML='<span>Dangal Play</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-distrotv.jpg" alt="DistroTV" onerror="this.outerHTML='<span>DistroTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-etvwin.png" alt="ETV Win" onerror="this.outerHTML='<span>ETV Win</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-hungama.png" alt="Hungama" onerror="this.outerHTML='<span>Hungama</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-kancchalannka.jpg" alt="Kanccha Lannka" onerror="this.outerHTML='<span>Kanccha<br>Lannka</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-omtv.jpg" alt="OM TV" onerror="this.outerHTML='<span>OM TV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-rajtv.png" alt="Raj DigitalTV" onerror="this.outerHTML='<span>Raj DigitalTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shemaroome.png" alt="Shemaroo" onerror="this.outerHTML='<span>Shemaroo</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shorts.png" alt="Shorts Tv" onerror="this.outerHTML='<span>Shorts Tv</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shucaefilm.jpg" alt="Shucae Flim" onerror="this.outerHTML='<span>Shucae<br>Flim</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-stage.png" alt="Stage" onerror="this.outerHTML='<span>Stage</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-sunnxt.png" alt="SunNXT" onerror="this.outerHTML='<span>SunNXT</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-travelxp.png" alt="TravelXP" onerror="this.outerHTML='<span>TravelXP</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-waves.jpg" alt="Waves" onerror="this.outerHTML='<span>Waves</span>'"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband+%2B+OTT+Standard+200 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="k-card k-card-premium">
+                        <div class="k-card-header">
+                            <h2 class="k-card-title">
+                                <div class="k-title-wrap">
+                                    <span class="k-plan-name">Premium</span>
+                                    <span class="k-plan-speed">300 Mbps</span>
+                                </div>
+                            </h2>
+                            <p class="k-card-subtitle">Premium streaming & gaming</p>
+                            <div class="k-badges">
+                                <span class="k-badge k-badge-speed">300 Mbps</span>
+                                <span class="k-badge k-badge-data">Unlimited Internet</span>
+                                <span class="k-badge k-badge-tv">450+ LIVE TV Channels</span>
+                                <span class="k-badge k-badge-ott">25 OTT apps</span>
+                            </div>
+                        </div>
+                        <div class="k-card-body">
+                            <div class="k-ott-header">
+                                <div class="k-ott-title">MAIN OTT APPS</div>
+                                <div class="k-ott-bundle-text">Dream bundle</div>
+                            </div>
+                            <div class="k-ott-grid">
+                                <div class="k-ott-icon"><img src="assets/ott/ott-netflix.png" alt="Netflix" onerror="this.outerHTML='<span>Netflix<br>(Basic)</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-prime.png" alt="Amazon" onerror="this.outerHTML='<span>Amazon<br>(Lite)</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-hotstar.jpg" alt="JioHotstar" onerror="this.outerHTML='<span>JioHotstar</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-zee5.png" alt="ZEE5" onerror="this.outerHTML='<span>ZEE5</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-sonyliv.png" alt="SonyLIV" onerror="this.outerHTML='<span>SonyLIV</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-discovery.png" alt="Discovery+" onerror="this.outerHTML='<span>Discovery+</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-fancode.png" alt="Fancode" onerror="this.outerHTML='<span>Fancode</span>'"></div>
+                                <div class="k-ott-icon"><img src="assets/ott/ott-jiosaavn.webp" alt="Jio Saavn" onerror="this.outerHTML='<span>Jio Saavn</span>'"></div>
+                                <button class="k-more-btn" onclick="toggleOtt(this)">+17</button>
+                            </div>
+                            <div class="k-dropdown">
+                                <div class="k-ott-grid">
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-ahatamil.png" alt="Aha Tamil" onerror="this.outerHTML='<span>Aha Tamil</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chanajor.png" alt="Chana Jor" onerror="this.outerHTML='<span>Chana Jor</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-chaupal.jpg" alt="Chaupal" onerror="this.outerHTML='<span>Chaupal</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-dangalplay.jpg" alt="Dangal Play" onerror="this.outerHTML='<span>Dangal Play</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-distrotv.jpg" alt="DistroTV" onerror="this.outerHTML='<span>DistroTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-etvwin.png" alt="ETV Win" onerror="this.outerHTML='<span>ETV Win</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-hungama.png" alt="Hungama" onerror="this.outerHTML='<span>Hungama</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-kancchalannka.jpg" alt="Kanccha Lannka" onerror="this.outerHTML='<span>Kanccha<br>Lannka</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-omtv.jpg" alt="OM TV" onerror="this.outerHTML='<span>OM TV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-rajtv.png" alt="Raj DigitalTV" onerror="this.outerHTML='<span>Raj DigitalTV</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shemaroome.png" alt="Shemaroo" onerror="this.outerHTML='<span>Shemaroo</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shorts.png" alt="Shorts Tv" onerror="this.outerHTML='<span>Shorts Tv</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-shucaefilm.jpg" alt="Shucae Flim" onerror="this.outerHTML='<span>Shucae<br>Flim</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-stage.png" alt="Stage" onerror="this.outerHTML='<span>Stage</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-sunnxt.png" alt="SunNXT" onerror="this.outerHTML='<span>SunNXT</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-travelxp.png" alt="TravelXP" onerror="this.outerHTML='<span>TravelXP</span>'"></div>
+                                    <div class="k-ott-icon"><img src="assets/ott/ott-waves.jpg" alt="Waves" onerror="this.outerHTML='<span>Waves</span>'"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="k-card-footer">
+                            <div class="k-actions">
+                                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband+%2B+OTT+Premium+300 Mbps+plan." class="k-btn k-btn-new" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Chat</a>
+                                <a href="tel:+918788536698" class="k-btn k-btn-exist"><ion-icon name="call-outline"></ion-icon> Call</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="office-cta">
+                <h2>🏢 Office / Business Fiber?</h2>
+                <p>For office and business fiber plans, please contact us directly. We provide dedicated leased lines, static IP, and custom pricing based on your requirement.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/919272162704" target="_blank" class="btn btn-primary">
+                        <ion-icon name="logo-whatsapp" style="margin-right:.5rem;"></ion-icon>Talk to Our Team
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">Send an Enquiry</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" style="display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;margin-bottom:1rem;">
+                    <span style="font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;line-height:1;letter-spacing:-1px;color:#fff;">DREAM</span>
+                    <span style="font-family:'Inter',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;color:#9ca3af;">IPTV & INTERNET</span>
+                </a>
+                <p>Reliable fiber broadband with fast installation and direct local support.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="broadband.html">Fiber Internet Plans</a>
+                <a href="broadband-ott.html">OTT Bundles</a>
+                <a href="iptv.html">IPTV Channels</a>
+                <a href="contact.html">Business Internet</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Support</h4>
+                <p>Call: 8788536698, 9228172558</p>
+                <p>WhatsApp Number: 9272162704</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dream IPTV & Internet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function switchMainTab(tabType) {
+            const broadbandSection = document.getElementById('section-broadband');
+            const broadbandOttSection = document.getElementById('section-broadband-ott');
+            const btnBroadband = document.getElementById('btn-tab-broadband');
+            const btnBroadbandOtt = document.getElementById('btn-tab-broadband-ott');
+            
+            if (tabType === 'broadband') {
+                broadbandSection.classList.add('active');
+                broadbandOttSection.classList.remove('active');
+                btnBroadband.classList.add('active');
+                btnBroadbandOtt.classList.remove('active');
+            } else {
+                broadbandSection.classList.remove('active');
+                broadbandOttSection.classList.add('active');
+                btnBroadband.classList.remove('active');
+                btnBroadbandOtt.classList.add('active');
+            }
+        }
+        
+        function toggleOtt(btn) {
+            const dropdown = btn.parentElement.nextElementSibling;
+            dropdown.classList.toggle('active');
+            if (dropdown.classList.contains('active')) {
+                btn.textContent = '-';
+            } else {
+                btn.textContent = '+ More';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash === '#broadband') {
+                switchMainTab('broadband');
+            } else if (hash === '#broadband-ott') {
+                switchMainTab('broadband-ott');
+            }
+        });
+        
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash;
+            if (hash === '#broadband') {
+                switchMainTab('broadband');
+            } else if (hash === '#broadband-ott') {
+                switchMainTab('broadband-ott');
+            }
+        });
+    </script>
+</body>
+</html>

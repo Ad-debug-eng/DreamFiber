@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dream IPTV & Internet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Added to prevent horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+        }
+
+        .page-header {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(180deg, #fef2f8 0%, var(--bg-white) 100%);
+        }
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding: 4rem 20px; /* Added 20px left/right padding */
+            box-sizing: border-box; /* Prevents padding from breaking width */
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        .about-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        .stat-card h3 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; letter-spacing: -1px;" class="text-gradient">DREAM</span>
+                    <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; color: #111827;">IPTV & INTERNET</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="enterprise-solution.html">Enterprise Solution</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn ">Home Broadband <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="broadband.html">Broadband</a>
+                        <a href="broadband-ott.html">Broadband + OTT</a>
+                    </div>
+                </div>
+                <a href="ott.html">OTT</a>
+                <a href="iptv.html">IPTV</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn active">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="javascript:void(0)" onclick="alert('FAQs coming soon!')">FAQs (Quick Answer)</a>
+                        <a href="contact.html">Contact Us (WhatsApp or Call)</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="javascript:void(0)" onclick="alert('Under Construction')" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
+                    <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
+                </a>
+            </div>
+            <button class="mobile-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="text-gradient">About Dream</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">
+                Empowering our community with high-speed, reliable digital experiences.
+            </p>
+        </div>
+    </section>
+
+    <section class="section container about-content">
+        <div class="about-text">
+            <h2>Our <span class="text-gradient">Mission</span></h2>
+            <p>At Dream IPTV & Internet, we believe that internet access is no longer a luxury—it's a fundamental necessity. We started as a local ISP with a vision to eliminate dead zones and slow connections in our community.</p>
+            <p>Today, we don't just provide fiber internet. We provide an ecosystem. By partnering with leading OTT and IPTV platforms, we deliver a unified, seamless entertainment experience straight to your living room without the hassle of multiple bills.</p>
+            <p>Our focus has always been on local, responsive support. We don't believe in making you wait on hold for hours. Reach out to us on WhatsApp, and our team will actually respond.</p>
+            <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Check Feasibility on WhatsApp</a>
+        </div>
+        <div class="about-stats">
+            <div class="card stat-card">
+                <h3>50k+</h3>
+                <p>Happy Subscribers</p>
+            </div>
+            <div class="card stat-card">
+                <h3>99.9%</h3>
+                <p>Uptime Guaranteed</p>
+            </div>
+            <div class="card stat-card">
+                <h3>15+</h3>
+                <p>OTT Partners</p>
+            </div>
+            <div class="card stat-card">
+                <h3>24/7</h3>
+                <p>Local Support</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; margin-bottom: 1rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; line-height: 1; letter-spacing: -1px; color: #ffffff;">DREAM</span>
+                    <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 2px; color: #9ca3af;">IPTV & INTERNET</span>
+                </a>
+                <p>Reliable fiber broadband with fast installation and direct support. Internet, IPTV and OTT bundles in your area.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="broadband.html">Fiber Internet Plans</a>
+                <a href="broadband-ott.html">OTT Bundles</a>
+                <a href="iptv.html">IPTV Channels</a>
+                <a href="contact.html">Business Internet</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Support</h4>
+                <p>Call: 8788536698, 9228172558</p>
+                <p>WhatsApp Number: 9272162704</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dream IPTV & Internet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

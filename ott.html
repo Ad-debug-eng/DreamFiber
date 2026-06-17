@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTT Partners | Dream IPTV & Internet</title>
+    <meta name="description" content="Get high-speed fiber internet with OTT bundles, IPTV, and seamless connectivity. Plans starting from affordable prices. Quick installation and local support.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <!-- User's uploaded logo -->
+                <a href="index.html" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; letter-spacing: -1px;" class="text-gradient">DREAM</span>
+                    <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; color: #111827;">IPTV & INTERNET</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="enterprise-solution.html">Enterprise Solution</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn ">Home Broadband <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="broadband.html">Broadband</a>
+                        <a href="broadband-ott.html">Broadband + OTT</a>
+                    </div>
+                </div>
+                <a href="ott.html">OTT</a>
+                <a href="iptv.html">IPTV</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn ">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="javascript:void(0)" onclick="alert('FAQs coming soon!')">FAQs (Quick Answer)</a>
+                        <a href="contact.html">Contact Us (WhatsApp or Call)</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="javascript:void(0)" onclick="alert('Under Construction')" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
+                    <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+    <style>
+        .ott-logo-tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(200,32,138,0.1) !important;
+            border-color: rgba(200,32,138,0.4) !important;
+        }
+
+        /* Trending Slider Styles */
+        .trending-slider-container {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .trending-viewport {
+            overflow: hidden;
+            padding: 1.5rem 0;
+            touch-action: pan-y;
+            cursor: grab;
+        }
+        
+        .trending-viewport:active {
+            cursor: grabbing;
+        }
+        
+        .trending-track {
+            display: flex;
+            gap: 1.5rem;
+            will-change: transform;
+        }
+        
+        /* Premium Fades Removed */
+        .trending-slider-container::before,
+        .trending-slider-container::after {
+            display: none;
+        }
+        
+        /* Premium Release Cards */
+        .release-card {
+            background: #ffffff;
+            border: 1px solid rgba(200, 32, 138, 0.12);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            min-width: 220px;
+            width: 220px;
+            flex-shrink: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+        }
+        
+        .release-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(200, 32, 138, 0.08);
+            border-color: rgba(200, 32, 138, 0.3);
+        }
+        
+        .poster-wrap {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background: #f8fafc;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .poster-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .release-card:hover .poster-wrap img {
+            transform: scale(1.08);
+        }
+        
+        .card-body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .card-body .title {
+            margin: 0;
+            font-size: 1.05rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-main);
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Provider Pill Badges */
+        .provider-badge {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            padding: 0.35rem 0.8rem;
+            border-radius: 50px;
+            transition: var(--transition-smooth);
+        }
+        
+        .badge-netflix {
+            background-color: rgba(229, 62, 62, 0.1);
+            color: #E53E3E;
+        }
+        
+        .badge-prime {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: #2563EB;
+        }
+        
+        .badge-hotstar {
+            background-color: rgba(13, 148, 136, 0.1);
+            color: #0D9488;
+        }
+        
+        .badge-sonyliv {
+            background-color: rgba(217, 70, 239, 0.1);
+            color: #D946EF;
+        }
+        
+        .badge-zee5 {
+            background-color: rgba(124, 58, 237, 0.1);
+            color: #7C3AED;
+        }
+        
+        .badge-default {
+            background-color: rgba(200, 32, 138, 0.1);
+            color: var(--primary);
+        }
+        
+        /* Navigation Buttons */
+        .trend-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(200, 32, 138, 0.15);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: var(--primary);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .trend-nav-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(200, 32, 138, 0.25);
+        }
+        
+        .trend-nav-btn:active {
+            transform: translateY(-50%) scale(0.92);
+        }
+        
+        .trend-nav-btn--left {
+            left: -24px;
+        }
+        
+        .trend-nav-btn--right {
+            right: -24px;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+        
+        @media (max-width: 1250px) {
+            .trend-nav-btn--left { left: 10px; }
+            .trend-nav-btn--right { right: 10px; }
+        }
+    </style>
+
+    <!-- Page Header (Formatted & Content Centered) -->
+    <section class="page-header" style="padding-top: 120px; padding-bottom: 3rem; text-align: center;">
+        <div class="container">
+            <h1 class="text-gradient" style="font-size: 3rem; font-family: 'Outfit', sans-serif; font-weight: 800; margin-bottom: 1rem;">Premium OTT Partners</h1>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 1.15rem; line-height: 1.6;">
+                Experience the ultimate entertainment with our bundled OTT plans. We bring all your favorite streaming apps directly to your screens.
+            </p>
+        </div>
+    </section>
+
+    <!-- Trending Now on OTT Section -->
+    <section class="trending-ott-section" style="padding: 2rem 0 1rem; background: #fff;">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <span class="badge" style="margin-bottom: 0.5rem; background: rgba(200, 32, 138, 0.1); color: var(--primary);">Live Updates</span>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;"><span class="text-gradient">Trending on OTT</span> in India</h2>
+                    <p style="color: var(--text-muted); font-size: 1.05rem;">Top trending movies and shows updated live from JustWatch.</p>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <span id="trending-status" style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;"></span>
+                </div>
+            </div>
+            
+            <div class="trending-slider-container">
+                <button class="trend-nav-btn trend-nav-btn--left" aria-label="Previous">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <div class="trending-viewport" id="trendingViewport">
+                    <div id="trendingTrack" class="trending-track"></div>
+                </div>
+                <button class="trend-nav-btn trend-nav-btn--right" aria-label="Next">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTT Section (Centered Grid alignment for final rows) -->
+    <section class="ott-hub section" style="background: linear-gradient(180deg, #fff 0%, #fef2f8 100%); padding-top: 2rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); justify-content: center; gap: 1.5rem; margin-bottom: 3rem;">
+                
+                <!-- Highlighted Premium Tier -->
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-netflix.png" alt="Netflix" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Netflix</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-prime.png" alt="Prime Video" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Amazon</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-hotstar.jpg" alt="Hotstar" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">JioHotstar</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-zee5.png" alt="ZEE5" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">ZEE5</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-sonyliv.png" alt="Sony LIV" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">SonyLIV</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-discovery.png" alt="Discovery+" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">DiscoveryPlus</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-fancode.png" alt="Fancode" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Fancode</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-jiosaavn.webp" alt="Jio Saavn" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Jio Saavn</span>
+                </div>
+
+                <!-- Standard Alphabetical Tier -->
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-ahatamil.png" alt="Aha Tamil" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Aha Tamil</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-chanajor.png" alt="Chanajor" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Chana Jor</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-chaupal.jpg" alt="Chaupal" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Chaupal</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-dangalplay.jpg" alt="Dangal Play" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Dangal Play</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-distrotv.jpg" alt="DistroTV" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">DistroTV</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-etvwin.png" alt="ETV Win" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">ETV Win</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-hungama.png" alt="Hungama" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Hungama</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-kancchalannka.jpg" alt="Kancchalannka" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Kanccha Lannka</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-omtv.jpg" alt="OMTV" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">OM TV</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-rajtv.png" alt="RajTV" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Raj DigitalTV</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-shemaroome.png" alt="ShemarooMe" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Shemaroo</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-shorts.png" alt="Shorts" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Shorts Tv</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-shucaefilm.jpg" alt="Shucaefilm" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Shucae Flim</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-stage.png" alt="Stage" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">Stage</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-sunnxt.png" alt="SunNXT" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">SunNXT</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-travelxp.png" alt="Travelxp" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1f2937;">TravelXP</span>
+                </div>
+
+                <div class="ott-logo-tile" style="background:#fff; border-radius:16px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.03); border:1px solid rgba(200,32,138,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; aspect-ratio:1/1;">
+                    <img src="assets/ott/ott-waves.jpg" alt="Waves" style="max-width:80%; max-height:80%; object-fit:contain; border-radius:12px;">
+                    <span style="font-weight:700; font-family:'Inter',sans-serif; font-weight:700; font-size:0.9rem; color:#1f2937;">Waves</span>
+                </div>
+            </div>
+            
+            <div class="office-cta" style="background: #fff; border: 1.5px solid rgba(200,32,138,0.3); border-radius: 20px; padding: 4rem 2rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.05); position:relative; overflow:hidden;">
+                <div style="position:absolute; top:-50%; left:-10%; width:300px; height:300px; background:radial-gradient(circle, rgba(200,32,138,0.1) 0%, transparent 70%); border-radius:50%;"></div>
+                <div style="position:absolute; bottom:-50%; right:-10%; width:400px; height:400px; background:radial-gradient(circle, rgba(106,43,155,0.1) 0%, transparent 70%); border-radius:50%;"></div>
+                
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; position:relative; z-index:1;" class="text-gradient">Ready to Upgrade Your Entertainment?</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem; font-size:1.1rem; position:relative; z-index:1;">Combine your high-speed Dream internet with these premium OTT subscriptions and save money every month on separate bills.</p>
+                <div class="cta-buttons" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position:relative; z-index:1;">
+                    <a href="broadband-ott.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        View Bundled Plans
+                    </a>
+                    <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+your+OTT+bundle+plans." target="_blank" class="btn btn-outline" style="padding: 1rem 2.5rem; font-size: 1.1rem; border-color: rgba(200,32,138,0.3);">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; margin-bottom: 1rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; line-height: 1; letter-spacing: -1px; color: #ffffff;">DREAM</span>
+                    <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 2px; color: #9ca3af;">IPTV & INTERNET</span>
+                </a>
+                <p>Reliable fiber broadband with fast installation and direct support. Internet, IPTV and OTT bundles in your area.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="broadband.html">Fiber Internet Plans</a>
+                <a href="broadband-ott.html">OTT Bundles</a>
+                <a href="iptv.html">IPTV Channels</a>
+                <a href="contact.html">Business Internet</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Support</h4>
+                <p>Call: 8788536698, 9228172558</p>
+                <p>WhatsApp Number: 9272162704</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dream IPTV & Internet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function getProviderBadgeClass(provider) {
+            if (!provider) return 'badge-default';
+            const p = provider.toLowerCase();
+            if (p.includes('netflix')) return 'badge-netflix';
+            if (p.includes('prime') || p.includes('amazon')) return 'badge-prime';
+            if (p.includes('hotstar') || p.includes('jio')) return 'badge-hotstar';
+            if (p.includes('sony') || p.includes('liv')) return 'badge-sonyliv';
+            if (p.includes('zee')) return 'badge-zee5';
+            return 'badge-default';
+        }
+
+        function renderCards(trackEl, items) {
+            trackEl.innerHTML = items
+                .map(
+                    (item) => `
+                    <article class="release-card">
+                        <div class="poster-wrap">
+                            <img src="${item.image}" alt="${item.title}" loading="lazy" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="title">${item.title}</h2>
+                            <span class="provider-badge ${getProviderBadgeClass(item.provider)}">${item.provider}</span>
+                        </div>
+                    </article>
+                    `
+                )
+                .join("");
+        }
+
+        function setupInfiniteCarousel({ viewportEl, trackEl }) {
+            let rafId = null;
+            const autoSpeedPxPerFrame = 0.45;
+            let offsetX = 0;
+            let isDragging = false;
+            let dragStartX = 0;
+            let dragStartOffset = 0;
+
+            function getGap() {
+                const style = getComputedStyle(trackEl);
+                return parseFloat(style.columnGap || style.gap || "24") || 24;
+            }
+
+            function getStep() {
+                const firstCard = trackEl.querySelector(".release-card");
+                if (!firstCard) return 244;
+                return firstCard.getBoundingClientRect().width + getGap();
+            }
+
+            function applyTransform() {
+                trackEl.style.transform = `translate3d(${offsetX}px, 0, 0)`;
+            }
+
+            function recycleLeftIfNeeded() {
+                const step = getStep();
+                while (offsetX <= -step) {
+                    const first = trackEl.firstElementChild;
+                    if (!first) break;
+                    trackEl.appendChild(first);
+                    offsetX += step;
+                }
+            }
+
+            function recycleRightIfNeeded() {
+                const step = getStep();
+                while (offsetX >= step) {
+                    const last = trackEl.lastElementChild;
+                    if (!last) break;
+                    trackEl.insertBefore(last, trackEl.firstElementChild);
+                    offsetX -= step;
+                }
+            }
+
+            function tick() {
+                if (!isDragging) {
+                    offsetX -= autoSpeedPxPerFrame;
+                    recycleLeftIfNeeded();
+                    applyTransform();
+                }
+                rafId = requestAnimationFrame(tick);
+            }
+
+            function onPointerDown(e) {
+                isDragging = true;
+                dragStartX = e.clientX;
+                dragStartOffset = offsetX;
+                viewportEl.setPointerCapture(e.pointerId);
+            }
+
+            function onPointerMove(e) {
+                if (!isDragging) return;
+                const dx = e.clientX - dragStartX;
+                offsetX = dragStartOffset + dx;
+                recycleLeftIfNeeded();
+                recycleRightIfNeeded();
+                applyTransform();
+            }
+
+            function onPointerUp(e) {
+                if (!isDragging) return;
+                isDragging = false;
+                try {
+                    viewportEl.releasePointerCapture(e.pointerId);
+                } catch (err) {}
+            }
+
+            viewportEl.addEventListener("pointerdown", onPointerDown);
+            viewportEl.addEventListener("pointermove", onPointerMove);
+            viewportEl.addEventListener("pointerup", onPointerUp);
+            viewportEl.addEventListener("pointercancel", onPointerUp);
+
+            applyTransform();
+            rafId = requestAnimationFrame(tick);
+
+            return {
+                next() {
+                    offsetX -= getStep();
+                    recycleLeftIfNeeded();
+                    applyTransform();
+                },
+                prev() {
+                    offsetX += getStep();
+                    recycleRightIfNeeded();
+                    applyTransform();
+                },
+                stop() {
+                    if (rafId) cancelAnimationFrame(rafId);
+                }
+            };
+        }
+
+        async function loadTrendingUpdates() {
+            const statusEl = document.getElementById("trending-status");
+            const trackEl = document.getElementById("trendingTrack");
+            const viewportEl = document.getElementById("trendingViewport");
+            
+            try {
+                const response = await fetch("imdb scraper/ott_trending.json", { cache: "no-store" });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                const items = Array.isArray(data) ? data.slice(0, 10) : [];
+                
+                if (items.length === 0) {
+                    statusEl.textContent = "No trending items found.";
+                    return;
+                }
+                
+                renderCards(trackEl, items);
+                
+                const carousel = setupInfiniteCarousel({
+                    viewportEl: viewportEl,
+                    trackEl: trackEl
+                });
+
+                document.querySelector(".trend-nav-btn--left").addEventListener("click", () => carousel.prev());
+                document.querySelector(".trend-nav-btn--right").addEventListener("click", () => carousel.next());
+
+                statusEl.innerHTML = `<span style="display:inline-flex; align-items:center; gap:0.35rem; color:#16a34a;"><span style="display:inline-block; width:8px; height:8px; border-radius:50%; background-color:#16a34a; animation: pulse 1.5s infinite;"></span> Live Updates Active</span>`;
+            } catch (error) {
+                console.error("Could not load trending OTT JSON:", error);
+                statusEl.textContent = "Updates paused.";
+                document.querySelector(".trending-ott-section").style.display = "none";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadTrendingUpdates);
+    </script>
+</body>
+</html>
