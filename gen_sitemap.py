@@ -6,7 +6,7 @@ sys.path.insert(0, str(ROOT / "seo"))
 import seo_config as cfg
 import seo_data as data
 
-LASTMOD = "2026-06-17"  # bump when content changes
+LASTMOD = "2026-06-20"  # bump when content changes
 
 
 def gen_sitemap():

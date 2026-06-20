@@ -11,7 +11,7 @@
     <style>
         /* Page Header */
         .page-header {
-            padding: 9rem 0 3rem;
+            padding: 9rem 0 var(--page-bottom-gap, 0.5rem);
             text-align: center;
             background: linear-gradient(180deg, #fef2f8 0%, #fff 100%);
         }
@@ -51,7 +51,7 @@
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: var(--grid-gap, 0.5rem);
             margin-bottom: 4rem;
         }
         @media (min-width: 768px) {
@@ -159,7 +159,7 @@
             font-weight: 500;
         }
         .k-card-body {
-            padding: 1.5rem;
+            padding: 0;
             flex-grow: 1;
         }
         .k-duration-title {
@@ -171,13 +171,14 @@
             margin-bottom: 0.8rem;
         }
         .k-card-footer {
-            padding: 1.5rem;
-            border-top: 1px solid #f3f4f6;
-            background: #fafafa;
+            padding: 0;
+            border-top: none;
+            background: transparent;
         }
         .k-actions {
             display: flex;
             gap: 0.8rem;
+            padding: 0 1.5rem;
         }
         .k-btn {
             flex: 1;
@@ -234,7 +235,7 @@
         .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     </style>
     <!-- SEO:START -->
-    <link rel="canonical" href="https://dreamservices.in/broadband.html">
+    <link rel="canonical" href="https://dreamfiber.in/broadband.html">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://unpkg.com">
@@ -242,12 +243,12 @@
     <meta property="og:site_name" content="DreamFiber">
     <meta property="og:title" content="Home Broadband Plans in Chakan | DreamFiber WiFi">
     <meta property="og:description" content="Affordable home broadband and WiFi plans in Chakan from DreamFiber. High-speed fiber internet with quick installation and local support.">
-    <meta property="og:url" content="https://dreamservices.in/broadband.html">
-    <meta property="og:image" content="https://dreamservices.in/assets/hero_bg.png">
+    <meta property="og:url" content="https://dreamfiber.in/broadband.html">
+    <meta property="og:image" content="https://dreamfiber.in/assets/hero_bg.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home Broadband Plans in Chakan | DreamFiber WiFi">
     <meta name="twitter:description" content="Affordable home broadband and WiFi plans in Chakan from DreamFiber. High-speed fiber internet with quick installation and local support.">
-    <meta name="twitter:image" content="https://dreamservices.in/assets/hero_bg.png">
+    <meta name="twitter:image" content="https://dreamfiber.in/assets/hero_bg.png">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -255,7 +256,7 @@
     "InternetServiceProvider",
     "LocalBusiness"
   ],
-  "@id": "https://dreamservices.in/#business",
+  "@id": "https://dreamfiber.in/#business",
   "name": "DreamFiber",
   "legalName": "Dream Cable and Internet Services Private Limited",
   "alternateName": [
@@ -264,7 +265,7 @@
     "Dream Internet Services",
     "Dream WIFI"
   ],
-  "url": "https://dreamservices.in/",
+  "url": "https://dreamfiber.in/",
   "foundingDate": "2006",
   "telephone": "+918788536698",
   "address": {
@@ -389,13 +390,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dreamservices.in/"
+      "item": "https://dreamfiber.in/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Home Broadband",
-      "item": "https://dreamservices.in/broadband.html"
+      "item": "https://dreamfiber.in/broadband.html"
     }
   ]
 }
@@ -408,9 +409,8 @@
     <header id="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <a href="index.html" style="display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;text-decoration:none;">
-                    <span style="font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;line-height:1;letter-spacing:-1px;" class="text-gradient">DREAM</span>
-                    <span style="font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:2px;color:#111827;">IPTV & INTERNET</span>
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="assets/logo.png" alt="DreamFiber" style="height: var(--logo-nav-height); width: auto;">
                 </a>
             </div>
             <nav class="nav-links">
@@ -429,14 +429,15 @@
                     <a href="javascript:void(0)" class="nav-dropbtn">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
                     <div class="nav-dropdown-content">
                         <a href="about.html">About Us</a>
-                        <a href="javascript:void(0)" onclick="alert('FAQs coming soon!')">FAQs (Quick Answer)</a>
-                        <a href="contact.html">Contact Us (WhatsApp or Call)</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
                 </div>
             </nav>
             
             <div class="nav-actions">
-                <a href="javascript:void(0)" onclick="alert('Under Construction')" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="pay-bill.html" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
                 <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
                     <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
                 </a>
@@ -459,7 +460,7 @@
     <section class="section">
         <div class="container" style="max-width: 1500px; padding: 0 2rem;">
 
-            <div class="business-fiber-banner" style="background: #fff; padding: 1rem; border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 0.95rem; margin-bottom: 2rem;">
+            <div class="business-fiber-banner" style="background: #fff; padding: 1rem; border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 0.95rem; margin-bottom: var(--banner-gap, 0.5rem);">
                 <strong>Business / Office Fiber:</strong> Dedicated office fiber, static IP and leased line plans are available.
                 Contact us directly on WhatsApp or call for custom pricing.
             </div>
@@ -486,9 +487,7 @@
                                 Smart TV or multi-device homes should choose a higher speed.
                             </div>
                         </div>
-                        <div class="k-card-body">
-                            <div style="display: flex; flex-direction: column; gap: 0.4rem;"></div>
-                        </div>
+                        <div class="k-card-body"></div>
                         <div class="k-card-footer">
                             <div class="k-actions">
                                 <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Mini+50+Mbps+plan." class="k-btn k-btn-new" target="_blank">
@@ -520,9 +519,7 @@
                                 Ideal for small families, smooth HD streaming on multiple devices.
                             </div>
                         </div>
-                        <div class="k-card-body">
-                            <div style="display: flex; flex-direction: column; gap: 0.4rem;"></div>
-                        </div>
+                        <div class="k-card-body"></div>
                         <div class="k-card-footer">
                             <div class="k-actions">
                                 <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Basic+100+Mbps+plan." class="k-btn k-btn-new" target="_blank">
@@ -553,9 +550,7 @@
                                 Recommended for families who want smooth multi-screen streaming without buffering.
                             </div>
                         </div>
-                        <div class="k-card-body">
-                            <div style="display: flex; flex-direction: column; gap: 0.4rem;"></div>
-                        </div>
+                        <div class="k-card-body"></div>
                         <div class="k-card-footer">
                             <div class="k-actions">
                                 <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Standard+200+Mbps+plan." class="k-btn k-btn-new" target="_blank">
@@ -586,9 +581,7 @@
                                 Ideal for Smart TV, WFH, online classes and high-speed downloading.
                             </div>
                         </div>
-                        <div class="k-card-body">
-                            <div style="display: flex; flex-direction: column; gap: 0.4rem;"></div>
-                        </div>
+                        <div class="k-card-body"></div>
                         <div class="k-card-footer">
                             <div class="k-actions">
                                 <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I+need+a+new+connection+for+the+Broadband-only+Premium+300+Mbps+plan." class="k-btn k-btn-new" target="_blank">
@@ -609,7 +602,7 @@
                 <h2>🏢 Office / Business Fiber?</h2>
                 <p>For office and business fiber plans, please contact us directly. We provide dedicated leased lines, static IP, and custom pricing based on your requirement.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/919272162704" target="_blank" class="btn btn-primary">
+                    <a href="https://wa.me/919272162704?text=Hi%20Dream%20Fiber%21%20I%27m%20interested%20in%20a%20business%20fiber%20connection.%20Please%20suggest%20a%20plan." target="_blank" class="btn btn-primary">
                         <ion-icon name="logo-whatsapp" style="margin-right:.5rem;"></ion-icon>Talk to Our Team
                     </a>
                     <a href="contact.html" class="btn btn-outline">Send an Enquiry</a>
@@ -623,9 +616,8 @@
     <footer>
         <div class="container footer-container">
             <div class="footer-brand">
-                <a href="index.html" style="display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;margin-bottom:1rem;text-decoration:none;">
-                    <span style="font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;line-height:1;letter-spacing:-1px;color:#fff;">DREAM</span>
-                    <span style="font-family:'Inter',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:2px;color:#9ca3af;">IPTV & INTERNET</span>
+                <a href="index.html" style="display: flex; align-items: center; margin-bottom: 1rem; text-decoration: none;">
+                    <img src="assets/logo2.png" alt="DreamFiber" style="height: var(--logo-footer-height); width: auto;">
                 </a>
                 <p>Reliable fiber broadband with fast installation and direct local support.</p>
             </div>
@@ -639,7 +631,7 @@
             <div class="footer-contact">
                 <h4>Support</h4>
                 <p>DreamFiber (Dream Cable and Internet Services Pvt. Ltd.)</p>
-                <p>Chakan & Chakan MIDC, Pune — Since 2006</p>
+                <p>Chakan, Pune. Since 2006</p>
                 <p>Call: 8788536698, 9228172558</p>
                 <p>WhatsApp: 9272162704</p>
             </div>

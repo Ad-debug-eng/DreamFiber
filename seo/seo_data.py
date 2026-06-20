@@ -1,7 +1,7 @@
 """Single source of truth for DreamFiber business facts and JSON-LD builders."""
 import json
 
-DOMAIN = "https://dreamservices.in"
+DOMAIN = "https://dreamfiber.in"
 
 LEGAL_NAME = "Dream Cable and Internet Services Private Limited"
 ALT_NAMES = ["DreamFiber", "Dream Services", "Dream Internet Services", "Dream WIFI"]

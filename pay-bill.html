@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bill | DreamFiber</title>
+    <meta name="description" content="Pay your DreamFiber broadband, IPTV or OTT bill online. Secure payment portal for DreamFiber subscribers in Chakan.">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .iframe-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-top: var(--header-offset, 5.5rem);
+            box-sizing: border-box;
+            background: #fff;
+            z-index: 1;
+        }
+        .iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        .iframe-loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', sans-serif;
+            color: #6b7280;
+            z-index: 0;
+            text-align: center;
+        }
+        .iframe-loading ion-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+    </style>
+    <link rel="canonical" href="https://dreamfiber.in/pay-bill.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DreamFiber">
+    <meta property="og:title" content="Pay Bill | DreamFiber">
+    <meta property="og:description" content="Pay your DreamFiber broadband, IPTV or OTT bill online.">
+    <meta property="og:url" content="https://dreamfiber.in/pay-bill.html">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="assets/logo.png" alt="DreamFiber" style="height: var(--logo-nav-height); width: auto;">
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="enterprise-solution.html">Enterprise Solution</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn">Home Broadband <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="broadband.html">Broadband</a>
+                        <a href="broadband-ott.html">Broadband + OTT</a>
+                    </div>
+                </div>
+                <a href="ott.html">OTT</a>
+                <a href="iptv.html">IPTV</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="pay-bill.html" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
+                    <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <!-- Loading indicator -->
+    <div class="iframe-loading" id="loading">
+        <ion-icon name="hourglass-outline"></ion-icon>
+        <p>Loading payment portal...</p>
+    </div>
+
+    <!-- Iframe with the billing portal -->
+    <div class="iframe-wrap">
+        <iframe src="https://user.dreamcables.in/index.php?page=login" onload="document.getElementById('loading').style.display='none'" allow="cookies" sandbox="allow-same-origin allow-forms allow-scripts allow-popups"></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('navbar').classList.add('scrolled');
+        });
+    </script>
+</body>
+</html>

@@ -1,48 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dreamservices.in/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/broadband.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/broadband.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/broadband-ott.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/broadband-ott.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/ott.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/ott.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/iptv.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/iptv.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/enterprise-solution.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/enterprise-solution.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/services.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/services.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/about.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/about.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dreamservices.in/contact.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://dreamfiber.in/contact.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/faq.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/guest-wifi-small-business.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/wifi-7-future.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/iptv-setup-guide.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/iptv-channels-guide.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/4k-streaming-speed-guide.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/ott-bundle-savings.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/internet-security-tips.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/boost-wifi-signal.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/wifi-speed-optimization.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/fiber-internet-guide.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/home-broadband-guide.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/cost-of-downtime.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/dedicated-broadband-reasons.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/internet-leased-line-guide.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dreamfiber.in/blog-posts/business-broadband-chakan.html</loc>
+    <lastmod>2026-06-20</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

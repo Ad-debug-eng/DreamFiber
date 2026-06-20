@@ -30,7 +30,7 @@ Copy-paste these; never vary the spelling, spacing, or number format.
 | **Primary phone** | 8788536698 |
 | **Other phone** | 9228172558 |
 | **WhatsApp** | 9272162704 |
-| **Website** | https://dreamservices.in |
+| **Website** | https://dreamfiber.in |
 | **In business since** | 2006 |
 | **Services** | Lease Line, Business Broadband, Home Broadband, Premium OTT bundles, IPTV |
 
@@ -51,7 +51,7 @@ This is 80% of the battle for "near me" and "Dream Cable" searches.
 4. **Address:** enter your real Chakan office address (more specific than just
    "Chakan" — full street/landmark). This must be a DIFFERENT address from Akurdi.
 5. **Service area:** add `Chakan` and `Chakan MIDC`.
-6. **Phone:** primary `8788536698`. Add the website `https://dreamservices.in`.
+6. **Phone:** primary `8788536698`. Add the website `https://dreamfiber.in`.
 7. **Hours:** set them (the website schema assumes 9:00 AM – 9:00 PM, 7 days — match
    reality and tell me if different so I update the website).
 8. **Verification:** Google will verify by postcard / phone / video. Complete it —
@@ -120,12 +120,12 @@ the website's structured data (`sameAs`) so Google links them all to you.
 The on-page SEO is done, but tell Google about it:
 
 1. **Google Search Console** — https://search.google.com/search-console
-   - Add property `https://dreamservices.in` and verify (DNS or HTML tag — ask your
+   - Add property `https://dreamfiber.in` and verify (DNS or HTML tag — ask your
      host, or I can add a verification meta tag to the site).
    - Submit the sitemap: enter `sitemap.xml` under "Sitemaps".
    - Use "URL Inspection" on the homepage → "Request indexing".
 2. **Rich Results Test** — https://search.google.com/test/rich-results
-   - Test `https://dreamservices.in/` → confirm **LocalBusiness**, **Breadcrumb**,
+   - Test `https://dreamfiber.in/` → confirm **LocalBusiness**, **Breadcrumb**,
      and **FAQ** are detected with no errors.
 3. **Bing Webmaster Tools** — https://www.bing.com/webmasters → add site + sitemap.
 

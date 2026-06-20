@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | DreamFiber - Internet, IPTV & OTT</title>
+    <meta name="description" content="Frequently Asked Questions about DreamFiber fiber broadband, IPTV, OTT bundles, business leased lines, and support in Chakan & Chakan MIDC.">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        html, body { overflow-x: hidden; }
+        .page-header { padding: 10rem 0 var(--faq-header-gap, 2rem); text-align: center; background: linear-gradient(180deg, #fef2f8 0%, var(--bg-white) 100%); }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .faq-section { padding: 4rem 0; }
+        .faq-wrap { padding: 0; }
+        .faq-section h2 { font-size: 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; }
+        .faq-section h2 ion-icon { color: var(--primary); font-size: 1.8rem; }
+        .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+        .faq-item { border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; transition: var(--transition-smooth); }
+        .faq-item:hover { border-color: var(--primary); box-shadow: 0 4px 20px rgba(183, 27, 118, 0.08); }
+        .faq-question { width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; text-align: left; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--text-dark); }
+        .faq-question ion-icon { font-size: 1.3rem; color: var(--primary); flex-shrink: 0; transition: transform 0.3s ease; }
+        .faq-item.open .faq-question ion-icon { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 1.5rem; }
+        .faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+        .faq-answer p { margin: 0; color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; }
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.5rem; }
+            .faq-section h2 { font-size: 1.5rem; }
+            .faq-question { font-size: 0.95rem; padding: 1rem 1.25rem; }
+            .faq-answer { padding: 0 1.25rem; }
+            .faq-item.open .faq-answer { padding: 0 1.25rem 1rem; }
+        }
+    </style>
+    <!-- SEO:START -->
+    <link rel="canonical" href="https://dreamfiber.in/faq.html">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DreamFiber">
+    <meta property="og:title" content="FAQs | DreamFiber - Internet, IPTV & OTT">
+    <meta property="og:description" content="Frequently Asked Questions about DreamFiber fiber broadband, IPTV, OTT bundles, business leased lines, and support.">
+    <meta property="og:url" content="https://dreamfiber.in/faq.html">
+    <meta property="og:image" content="https://dreamfiber.in/assets/hero_bg.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQs | DreamFiber - Internet, IPTV & OTT">
+    <meta name="twitter:description" content="Frequently Asked Questions about DreamFiber fiber broadband, IPTV, OTT bundles, business leased lines, and support.">
+    <meta name="twitter:image" content="https://dreamfiber.in/assets/hero_bg.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between Fiber Optic and Regular Broadband?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regular broadband uses older copper telephone lines, which can lose speed over distance. Fiber optic uses light to transmit data through glass strands, offering exponentially faster, symmetric speeds and weather-proof reliability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your home broadband plans truly unlimited?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our premium home fiber plans offer truly unlimited data without hidden throttling (FUP limits), ensuring you can game, work, and stream in 4K without interruptions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Business Broadband and an Internet Leased Line (ILL)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business Broadband is a shared, cost-effective connection suitable for standard office work. An ILL is a private, dedicated connection with symmetric speeds (equal upload/download) and a 99.9% uptime guarantee for mission-critical operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do the Broadband + OTT bundles work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We combine your high-speed fiber connection with subscriptions to popular streaming platforms (like Netflix, Amazon Prime, and Disney+). You save money and pay for everything in one single, convenient monthly bill."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does installation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard residential broadband installations are typically completed within 24 to 48 hours. Enterprise leased lines require a brief site survey to determine the exact deployment timeline."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- SEO:END -->
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="assets/logo.png" alt="DreamFiber" style="height: var(--logo-nav-height); width: auto;">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="enterprise-solution.html">Enterprise Solution</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn">Home Broadband <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="broadband.html">Broadband</a>
+                        <a href="broadband-ott.html">Broadband + OTT</a>
+                    </div>
+                </div>
+                <a href="ott.html">OTT</a>
+                <a href="iptv.html">IPTV</a>
+                <div class="nav-dropdown">
+                    <a href="javascript:void(0)" class="nav-dropbtn active">Support <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-actions">
+                <a href="pay-bill.html" class="btn btn-primary" style="margin-right: 0.5rem;">Pay Bill</a>
+                <a href="https://wa.me/919272162704?text=Hi+Dream+Fiber%21+I%27m+interested+in+a+new+fiber+broadband+connection.+Please+check+feasibility+for+my+area." target="_blank" class="btn btn-outline">
+                    <ion-icon name="logo-whatsapp" style="margin-right: 0.5rem;"></ion-icon> WhatsApp
+                </a>
+            </div>
+            <button class="mobile-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked <span class="text-gradient">Questions</span></h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">
+                Everything you need to know about DreamFiber services.
+            </p>
+        </div>
+    </section>
+
+    <section class="faq-wrap">
+        <div class="container">
+
+            <div class="faq-section">
+                <h2><ion-icon name="information-circle-outline"></ion-icon> General &amp; Connectivity</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What is the difference between Fiber Optic and Regular Broadband?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Regular broadband uses older copper telephone lines, which can lose speed over distance. Fiber optic uses light to transmit data through glass strands, offering exponentially faster, symmetric speeds and weather-proof reliability.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Are your home broadband plans truly unlimited?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Yes. Our premium home fiber plans offer truly unlimited data without hidden throttling (FUP limits), ensuring you can game, work, and stream in 4K without interruptions.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Do you provide the Wi-Fi router with the connection?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Yes, we provide modern, dual-band (2.4 GHz and 5 GHz) or Wi-Fi 6 routers to maximize wireless coverage and speed throughout your home or office.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Can I use a home broadband connection for my business?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>No. Home broadband lacks the technical infrastructure required for reliable business operations. Residential lines use high contention ratios and Dynamic IPs, leading to severe throttling. Businesses require the symmetric bandwidth, Static IPs, and guaranteed SLA uptimes that only dedicated business connections provide.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><ion-icon name="business-outline"></ion-icon> Business &amp; Leased Lines</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What is the difference between Business Broadband and an Internet Leased Line (ILL)?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Business Broadband is a shared, cost-effective connection suitable for standard office work. An ILL is a private, dedicated connection with symmetric speeds (equal upload/download) and a 99.9% uptime guarantee for mission-critical operations.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Do you offer Service Level Agreements (SLAs) for businesses?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Yes. Our Internet Leased Lines come with enterprise-grade SLAs, guaranteeing rapid fault-repair times (usually within 4 to 6 hours) to minimize any business downtime.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Can you set up a secure Guest Wi-Fi network for my shop or cafe?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Absolutely. We can configure isolated guest networks with captive portals, allowing your customers to browse safely without compromising your primary business network or Point of Sale (POS) systems.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><ion-icon name="tv-outline"></ion-icon> OTT &amp; IPTV Bundles</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How do the Broadband + OTT bundles work?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>We combine your high-speed fiber connection with subscriptions to popular streaming platforms (like Netflix, Amazon Prime, and Disney+). You save money and pay for everything in one single, convenient monthly bill.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Do I need a satellite dish to use your IPTV service?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>No. Our IPTV service runs entirely through your DreamFiber internet connection. This provides high-definition live TV, Video on Demand, and catch-up features without any weather-related signal drops.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What internet speed do I need for smooth 4K streaming?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>For a buffer-free 4K experience, we recommend a minimum of 100 Mbps for a single TV. For households with multiple screens and devices, our 200 Mbps to 300 Mbps fiber plans are ideal.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><ion-icon name="headset-outline"></ion-icon> Support &amp; Installation</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How long does installation take?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>Standard residential broadband installations are typically completed within 24 to 48 hours. Enterprise leased lines require a brief site survey to determine the exact deployment timeline.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How do I contact tech support if my internet is slow or down?
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </button>
+                        <div class="faq-answer"><p>As a local ISP, we prioritize fast, localized support. You can reach our technical team directly via our customer helpline or support portal for rapid troubleshooting and on-site repairs.</p></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" style="display: flex; align-items: center; margin-bottom: 1rem; text-decoration: none;">
+                    <img src="assets/logo.png" alt="DreamFiber" style="height: var(--logo-footer-height); width: auto;">
+                </a>
+                <p>Reliable fiber broadband with fast installation and direct support. Internet, IPTV and OTT bundles in your area.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="broadband.html">Fiber Internet Plans</a>
+                <a href="broadband-ott.html">OTT Bundles</a>
+                <a href="iptv.html">IPTV Channels</a>
+                <a href="contact.html">Business Internet</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Support</h4>
+                <p>DreamFiber (Dream Cable and Internet Services Pvt. Ltd.)</p>
+                <p>Chakan & Chakan MIDC, Pune — Since 2006</p>
+                <p>Call: 8788536698, 9228172558</p>
+                <p>WhatsApp: 9272162704</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dream IPTV & Internet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function toggleFaq(btn) {
+            var item = btn.parentElement;
+            item.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
