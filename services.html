@@ -85,15 +85,19 @@
         .k-plan-speed { color: #000000; font-size: 1.35rem; font-family: 'Outfit', sans-serif; font-weight: 600; font-style: italic; margin-top: 0.2rem; }
         
         .k-best-seller {
-            background: #f97316;
-            color: #fff;
-            font-size: 0.7rem;
-            padding: 0.3rem 0.6rem;
-            border-radius: 50px;
+            background: #0072f0;
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 9999px;
             font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0, 114, 240, 0.25);
         }
         
         .k-card-subtitle { color: #6b7280; font-size: 0.95rem; margin-bottom: 1.5rem; font-weight: 500; }
@@ -178,8 +182,7 @@
     "Dream WIFI"
   ],
   "url": "https://dreamfiber.in/",
-  "foundingDate": "2006",
-  "telephone": "+918788536698",
+    "telephone": "+918788536698",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Chakan",
@@ -314,6 +317,16 @@
 }
     </script>
     <!-- SEO:END -->
+
+<style>
+@media (min-width: 992px) {
+  .page-header, .blog-hero {
+    padding: 1.5rem 0 0.5rem 0 !important;
+    text-align: center;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -424,7 +437,7 @@
                                     <span class="k-plan-name">Basic</span>
                                     <span class="k-plan-speed">100 Mbps</span>
                                 </div>
-                                <span class="k-best-seller">BEST SELLER</span>
+                                <span class="k-best-seller">Most popular</span>
                             </h2>
                             <p class="k-card-subtitle">Standard streaming & browsing</p>
                             <div class="k-badges">
@@ -569,14 +582,14 @@
                                     <span class="k-plan-name">Basic</span>
                                     <span class="k-plan-speed">100 Mbps</span>
                                 </div>
-                                <span class="k-best-seller">BEST SELLER</span>
+                                <span class="k-best-seller">Most popular</span>
                             </h2>
                             <p class="k-card-subtitle">Standard streaming & browsing</p>
                             <div class="k-badges">
                                 <span class="k-badge k-badge-speed">100 Mbps</span>
                                 <span class="k-badge k-badge-data">Unlimited Internet</span>
                                 <span class="k-badge k-badge-tv">450+ LIVE TV Channels</span>
-                                <span class="k-badge k-badge-ott">24 OTT apps</span>
+                                <span class="k-badge k-badge-ott">23 OTT apps</span>
                             </div>
                         </div>
                         <div class="k-card-body">
@@ -585,7 +598,7 @@
                                 <div class="k-ott-bundle-text">Dream bundle</div>
                             </div>
                             <div class="k-ott-grid">
-                                <div class="k-ott-icon"><img src="assets/ott/ott-prime.png" alt="Amazon" onerror="this.outerHTML='<span>Amazon<br>(Lite)</span>'"></div>
+                                
                                 <div class="k-ott-icon"><img src="assets/ott/ott-hotstar.jpg" alt="JioHotstar" onerror="this.outerHTML='<span>JioHotstar</span>'"></div>
                                 <div class="k-ott-icon"><img src="assets/ott/ott-zee5.png" alt="ZEE5" onerror="this.outerHTML='<span>ZEE5</span>'"></div>
                                 <div class="k-ott-icon"><img src="assets/ott/ott-sonyliv.png" alt="SonyLIV" onerror="this.outerHTML='<span>SonyLIV</span>'"></div>
@@ -782,13 +795,37 @@
             <div class="footer-contact">
                 <h4>Support</h4>
                 <p>DreamFiber (Dream Cable and Internet Services Pvt. Ltd.)</p>
-                <p>Chakan, Pune. Since 2006</p>
+                <p>Chakan, Pune.</p>
                 <p>Call: 8788536698, 9228172558</p>
                 <p>WhatsApp: 9272162704</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Dream IPTV & Internet. All Rights Reserved.</p>
+            <p>&copy; <span class="current-year">2026</span> Dream IPTV & Internet. All Rights Reserved.</p>
+        <script>
+            (function() {
+                function updateYear() {
+                    try {
+                        var year = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Kolkata', year: 'numeric' }).format(new Date());
+                        var els = document.querySelectorAll('.current-year');
+                        for (var i = 0; i < els.length; i++) {
+                            els[i].textContent = year;
+                        }
+                    } catch (e) {
+                        var fallback = new Date().getFullYear();
+                        var els = document.querySelectorAll('.current-year');
+                        for (var i = 0; i < els.length; i++) {
+                            els[i].textContent = fallback;
+                        }
+                    }
+                }
+                updateYear();
+                if (window.addEventListener) {
+                    window.addEventListener('pageshow', updateYear);
+                }
+                setInterval(updateYear, 60000);
+            })();
+        </script>
         </div>
     </footer>
 

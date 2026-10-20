@@ -195,6 +195,27 @@ PAGES = {
         "breadcrumb": [("Home", "/"), ("Blog", "/blog.html"), ("Leased Line vs Broadband", "/blog-posts/business-broadband-chakan.html")],
         "faq": None,
     },
+    "corporate-broadband.html": {
+        "title": "Corporate Broadband in Chakan MIDC | DreamFiber Business Internet",
+        "description": "High-performance corporate broadband for SMEs and enterprises in Chakan & Chakan MIDC. High-speed fiber internet with priority SLA and local support.",
+        "path": "/corporate-broadband.html",
+        "breadcrumb": [("Home", "/"), ("Corporate Broadband", "/corporate-broadband.html")],
+        "faq": None,
+    },
+    "leased-line.html": {
+        "title": "Internet Leased Line (ILL) in Chakan MIDC | DreamFiber 1:1 Dedicated",
+        "description": "Dedicated 1:1 symmetrical Internet Leased Line (ILL) for manufacturing units and corporate offices in Chakan MIDC. 99.5% SLA uptime guarantee.",
+        "path": "/leased-line.html",
+        "breadcrumb": [("Home", "/"), ("Internet Leased Line", "/leased-line.html")],
+        "faq": None,
+    },
+    "blog-posts/best-broadband-provider-chakan.html": {
+        "title": "Best Broadband & WiFi Provider in Chakan | DreamFiber",
+        "description": "Find the best broadband and WiFi provider in Chakan. Compare speeds, reliability, fiber coverage and local support across Chakan & MIDC.",
+        "path": "/blog-posts/best-broadband-provider-chakan.html",
+        "breadcrumb": [("Home", "/"), ("Blog", "/blog.html"), ("Best Broadband in Chakan", "/blog-posts/best-broadband-provider-chakan.html")],
+        "faq": None,
+    },
 }
 
 OG_IMAGE = "/assets/hero_bg.png"  # TODO(owner): swap for a 1200x630 share image if available.
