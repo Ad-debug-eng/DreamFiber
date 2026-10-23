@@ -5,8 +5,6 @@ DOMAIN = "https://dreamfiber.in"
 
 LEGAL_NAME = "Dream Cable and Internet Services Private Limited"
 ALT_NAMES = ["DreamFiber", "Dream Services", "Dream Internet Services", "Dream WIFI"]
-FOUNDING_YEAR = "2006"
-
 # Keep ALL numbers. Primary is the WhatsApp action number.
 PHONE_PRIMARY = "+918788536698"
 PHONES = ["+918788536698", "+919228172558", "+919272162704"]
@@ -42,7 +40,6 @@ def local_business_jsonld():
         "legalName": LEGAL_NAME,
         "alternateName": ALT_NAMES,
         "url": DOMAIN + "/",
-        "foundingDate": FOUNDING_YEAR,
         "telephone": PHONE_PRIMARY,
         "address": {"@type": "PostalAddress", **ADDRESS},
         "geo": {"@type": "GeoCoordinates", **GEO},

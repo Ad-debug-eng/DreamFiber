@@ -31,7 +31,7 @@ Copy-paste these; never vary the spelling, spacing, or number format.
 | **Other phone** | 9228172558 |
 | **WhatsApp** | 9272162704 |
 | **Website** | https://dreamfiber.in |
-| **In business since** | 2006 |
+| **In business since** |  |
 | **Services** | Lease Line, Business Broadband, Home Broadband, Premium OTT bundles, IPTV |
 
 ---
@@ -57,7 +57,7 @@ This is 80% of the battle for "near me" and "Dream Cable" searches.
 8. **Verification:** Google will verify by postcard / phone / video. Complete it —
    an unverified profile barely ranks.
 9. **Fill everything:** description (mention DreamFiber, Chakan, Chakan MIDC, lease
-   line, broadband, IPTV, OTT, "since 2006"), services with prices, and **10+ real
+   line, broadband, IPTV, OTT, ""), services with prices, and **10+ real
    photos** (office, installation team, router/ONT, signboard). Profiles with photos
    and complete info rank far above sparse ones — this is how you beat Akurdi.
 

@@ -3,7 +3,7 @@
 # faq: optional list of (question, answer) tuples for FAQPage schema.
 FAQ_HOME = [
     ("Which areas does DreamFiber cover?",
-     "DreamFiber provides fiber broadband, IPTV and OTT in Chakan and Chakan MIDC, with service since 2006."),
+     "DreamFiber provides fiber broadband, IPTV and OTT in Chakan and Chakan MIDC, with high-speed reliable connectivity."),
     ("How fast is installation?",
      "In most serviceable areas of Chakan we install within 24-48 hours of feasibility confirmation."),
     ("Do you provide lease lines for business?",
@@ -15,7 +15,7 @@ FAQ_HOME = [
 PAGES = {
     "index.html": {
         "title": "High Speed Internet in Chakan - Dream Fiber | Best WiFi & Leased Line",
-        "description": "DreamFiber offers high-speed fiber broadband, IPTV and OTT bundles in Chakan & Chakan MIDC. Trusted internet & cable since 2006. Get WiFi near you today.",
+        "description": "DreamFiber offers high-speed fiber broadband, IPTV and OTT bundles in Chakan & Chakan MIDC. Trusted internet & cable provider. Get WiFi near you today.",
         "path": "/",
         "breadcrumb": [("Home", "/")],
         "faq": FAQ_HOME,
@@ -50,7 +50,7 @@ PAGES = {
     },
     "enterprise-solution.html": {
         "title": "Lease Line & Business Internet in Chakan MIDC | DreamFiber",
-        "description": "Dedicated lease lines and business broadband for offices and factories in Chakan MIDC. Enterprise-grade uptime from DreamFiber since 2006.",
+        "description": "Dedicated lease lines and business broadband for offices and factories in Chakan MIDC. Enterprise-grade uptime from DreamFiber.",
         "path": "/enterprise-solution.html",
         "breadcrumb": [("Home", "/"), ("Business / Lease Line", "/enterprise-solution.html")],
         "faq": None,
@@ -63,8 +63,8 @@ PAGES = {
         "faq": None,
     },
     "about.html": {
-        "title": "About DreamFiber | Internet & Cable in Chakan Since 2006",
-        "description": "DreamFiber (Dream Cable and Internet Services Pvt. Ltd.) has provided internet and cable TV in Chakan since 2006. Learn about our local service.",
+        "title": "About DreamFiber | Internet & Cable in Chakan",
+        "description": "DreamFiber (Dream Cable and Internet Services Pvt. Ltd.) provides high-speed internet and cable TV in Chakan. Learn about our local service.",
         "path": "/about.html",
         "breadcrumb": [("Home", "/"), ("About", "/about.html")],
         "faq": None,
