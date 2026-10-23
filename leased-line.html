@@ -476,14 +476,35 @@
 }
 
 @media (max-width: 991px) {
+    .section {
+        padding: 2rem 0 !important;
+    }
+    .comparison-section {
+        padding: 2rem 0 !important;
+    }
+    .section-header {
+        margin-bottom: 1.25rem !important;
+    }
+    .section-header h2 {
+        font-size: 1.85rem !important;
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.4rem !important;
+    }
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        margin-bottom: 0 !important;
+    }
+    .feature-card {
+        padding: 1.25rem 1.2rem !important;
+    }
+    .hero-section {
+        padding: 3.5rem 0 2rem 0 !important;
     }
 }
 @media (max-width: 575px) {
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
 
