@@ -14,7 +14,7 @@ FAQ_HOME = [
 
 PAGES = {
     "index.html": {
-        "title": "DreamFiber | Best WiFi & Fiber Broadband in Chakan (Since 2006)",
+        "title": "High Speed Internet in Chakan - Dream Fiber | Best WiFi & Leased Line",
         "description": "DreamFiber offers high-speed fiber broadband, IPTV and OTT bundles in Chakan & Chakan MIDC. Trusted internet & cable since 2006. Get WiFi near you today.",
         "path": "/",
         "breadcrumb": [("Home", "/")],

@@ -127,47 +127,7 @@
 ]
 </script>
 
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="Site keywords here" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Site Title -->
-    <title>Contact DreamFiber | WiFi & Lease Line in Chakan</title>
-
-    <!-- Favicons & App Icons (Tabs, Android, iOS, Google Search) -->
-<link rel="icon" type="image/x-icon" href="favicon.ico"/>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" media="(prefers-color-scheme: light)"/>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)"/>
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" media="(prefers-color-scheme: light)"/>
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)"/>
-<link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png"/>
-<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png"/>
-<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png"/>
-<link rel="manifest" href="site.webmanifest"/>
-<meta name="theme-color" content="#0284c7"/>
-<script>
-  (function() {
-    var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-    function updateThemeFavicon() {
-      var dark = mq ? mq.matches : false;
-      document.querySelectorAll('link[rel="icon"]').forEach(function(el) {
-        var sz = el.getAttribute('sizes');
-        if (sz === '32x32') el.href = dark ? 'assets/images/favicon-dark-32x32.png' : 'assets/images/favicon-32x32.png';
-        if (sz === '16x16') el.href = dark ? 'assets/images/favicon-dark-16x16.png' : 'assets/images/favicon-16x16.png';
-      });
-    }
-    updateThemeFavicon();
-    if (mq && mq.addEventListener) { mq.addEventListener('change', updateThemeFavicon); }
-  })();
-</script>
-
-    <!-- Bootstrap -->
+<!-- Bootstrap -->
     <link rel="stylesheet" href="https://trendynet.pages.dev/assets/plugins/css/bootstrap.min.css" />
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://trendynet.pages.dev/assets/plugins/css/animate.min.css" />
@@ -536,9 +496,8 @@
 </style>
 
 <style>
-    html {
-        zoom: 0.9;
-    }
+    @media (min-width: 992px) { html { zoom: 0.9; } }
+@media (max-width: 991px) { html, body { zoom: 1 !important; overflow-x: hidden !important; max-width: 100vw !important; } }
 </style>
 
 <style>
