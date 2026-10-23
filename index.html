@@ -1024,10 +1024,13 @@
 /* Mobile responsiveness adjustments */
 @media (max-width: 991px) {
   .hero-area {
-    min-height: auto !important;
+    min-height: calc(100vh - 65px) !important;
     height: auto !important;
-    padding: 2rem 0 1.5rem !important;
+    padding: 1.25rem 0 !important;
     overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
   }
   .hero-single-slider {
     height: auto !important;
@@ -1042,14 +1045,14 @@
   }
   .hero-image-col {
     text-align: center !important;
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 0.6rem !important;
     display: flex !important;
     justify-content: center !important;
   }
   .hero-image-col img {
-    max-height: 220px !important;
+    max-height: 140px !important;
     width: auto !important;
-    max-width: 85% !important;
+    max-width: 75% !important;
     transform: none !important;
     margin: 0 auto !important;
     display: block !important;
@@ -1059,44 +1062,62 @@
     text-align: center !important;
   }
   .hero-content-title {
-    color: #0f172a !important;
-    font-size: 1.85rem !important;
+    color: #002b5e !important;
+    font-size: 1.38rem !important;
     font-weight: 800 !important;
     line-height: 1.25 !important;
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.4rem !important;
     display: block !important;
     overflow: visible !important;
     -webkit-line-clamp: unset !important;
   }
   .hero-content-text {
-    color: #334155 !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    margin: 0 auto 1.25rem !important;
-    max-width: 92% !important;
+    color: #475569 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+    margin: 0 auto 0.65rem !important;
+    max-width: 94% !important;
     display: block !important;
     overflow: visible !important;
     -webkit-line-clamp: unset !important;
   }
   .hero-content-button {
     margin-top: 0 !important;
-    margin-bottom: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
     text-align: center !important;
   }
   .hero-content-button .theme-btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    width: 100% !important;
+    max-width: 290px !important;
+    padding: 0.55rem 1.25rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 2, 73, 0.2) !important;
   }
   .hero-area .row.text-center {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .hero-pay-col {
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   .quick-action-btn {
-    padding: 10px 18px !important;
-    font-size: 13px !important;
+    padding: 0.55rem 1.25rem !important;
+    font-size: 0.88rem !important;
     font-weight: 700 !important;
     border-radius: 50px !important;
+    letter-spacing: 0.5px !important;
   }
   .services-tailored-area,
   .features-area,
@@ -1408,14 +1429,14 @@
       </div>
 
       <!-- 3 Quick Action Buttons directly inside Hero -->
-      <div class="row text-center justify-content-center mt-3" style="position: relative; z-index: 10;">
-        <div class="col-lg-3 col-md-4 col-12 mb-2">
+      <div class="row text-center justify-content-center mt-3 hero-quick-row" style="position: relative; z-index: 10;">
+        <div class="col-lg-3 col-md-4 col-12 mb-2 hero-pay-col">
           <a href="https://user.dreamcables.in/index.php?page=login" target="_blank" class="quick-action-btn btn-pay w-100">Pay Bill</a>
         </div>
-        <div class="col-lg-3 col-md-4 col-12 mb-2">
+        <div class="col-lg-3 col-md-4 col-12 mb-2 d-none d-lg-block">
           <a href="broadband.html" class="quick-action-btn btn-plans w-100">View Plans</a>
         </div>
-        <div class="col-lg-3 col-md-4 col-12 mb-2">
+        <div class="col-lg-3 col-md-4 col-12 mb-2 d-none d-lg-block">
           <a href="https://wa.me/919272162704" target="_blank" class="quick-action-btn btn-contact w-100">Contact Us</a>
         </div>
       </div>

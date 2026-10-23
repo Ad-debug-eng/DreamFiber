@@ -942,6 +942,93 @@
   transform: translateY(-50%) !important;
 }
 </style>
+<style>
+/* Hero Mobile Section - Single View with Image, Text, and Buttons */
+@media (max-width: 991px) {
+    .hero.corp-hero-light {
+        min-height: calc(100vh - 65px) !important;
+        padding: 1.25rem 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .hero.corp-hero-light .hero-content-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .hero.corp-hero-light .hero-side-image {
+        order: 1 !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 0.35rem !important;
+    }
+    .hero.corp-hero-light .hero-side-image img {
+        max-height: 135px !important;
+        width: auto !important;
+        max-width: 80% !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+    }
+    .hero.corp-hero-light .hero-text {
+        order: 2 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    .hero.corp-hero-light .badge-pill {
+        font-size: 0.72rem !important;
+        padding: 0.22rem 0.7rem !important;
+        margin-bottom: 0.4rem !important;
+        display: inline-flex !important;
+    }
+    .hero.corp-hero-light .hero-title {
+        font-size: 1.35rem !important;
+        font-weight: 800 !important;
+        line-height: 1.25 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.35rem !important;
+        color: #002b5e !important;
+    }
+    .hero.corp-hero-light .hero-subtitle {
+        font-size: 0.82rem !important;
+        line-height: 1.45 !important;
+        margin: 0 auto 0.65rem !important;
+        max-width: 94% !important;
+        color: #475569 !important;
+    }
+    .hero.corp-hero-light .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.45rem !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        margin: 0 auto !important;
+        align-items: stretch !important;
+    }
+    .hero.corp-hero-light .hero-buttons .btn-primary {
+        width: 100% !important;
+        padding: 0.55rem 1.25rem !important;
+        font-size: 0.88rem !important;
+        font-weight: 700 !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+    }
+    .hero.corp-hero-light .hero-buttons .btn-outline {
+        width: 100% !important;
+        padding: 0.55rem 1.25rem !important;
+        font-size: 0.88rem !important;
+        font-weight: 600 !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
+</style>
 </head>
 <body>
 <div class="modal mobile-menu-modal offcanvas-modal fade" id="offcanvas-modal">
