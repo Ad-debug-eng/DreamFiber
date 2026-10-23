@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
                               `*Location:* ${address}`;
 
             const btn = leasedLineForm.querySelector('button[type="submit"]');
-            sendToTelegram(tgMessage, btn, "Thank you! Your Leased Line feasibility request has been submitted. Our engineering desk will deliver a proposal within 24 hours.");
+            sendToTelegram(tgMessage, btn, "Thank you! Your Leased Line feasibility request has been submitted. Our technical team will deliver a proposal within 24 hours.");
         });
     }
 
