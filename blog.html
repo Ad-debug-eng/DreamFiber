@@ -921,6 +921,93 @@
     }
 }
 </style>
+<style>
+/* Mobile Drawer & Header Top Section Fix */
+.offcanvas-dialog {
+  width: 320px !important;
+  max-width: 85vw !important;
+}
+.offcanvas-header {
+  background: #000249 !important;
+  padding: 14px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  min-height: 64px !important;
+}
+.offcanvas-header .offcanvas-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+}
+.offcanvas-header .offcanvas-logo a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+}
+.offcanvas-header .offcanvas-logo img[alt="df logo"] {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  margin-right: 0 !important;
+  filter: brightness(0) invert(1) !important;
+}
+.offcanvas-header .offcanvas-logo img[alt="Dream Fiber Text"] {
+  height: 22px !important;
+  width: auto !important;
+  max-width: 155px !important;
+  object-fit: contain !important;
+  margin-top: 0 !important;
+}
+.offcanvas-header .btn-close {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  opacity: 1 !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+}
+.offcanvas-header .btn-close:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+  transform: rotate(90deg) !important;
+}
+.offcanvas-header .btn-close i {
+  font-size: 13px !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+@media (max-width: 991px) {
+  .header-logo a {
+    gap: 8px !important;
+  }
+  .header-logo img[alt="df logo"] {
+    width: 36px !important;
+    height: 36px !important;
+    margin-right: 0 !important;
+  }
+  .header-logo img[alt="Dream Fiber Text"] {
+    height: 26px !important;
+    width: auto !important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="modal mobile-menu-modal offcanvas-modal fade" id="offcanvas-modal">
