@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /assets/images/
+Allow: /assets/docs/
 
+# Search Engine Sitemap Index
 Sitemap: https://dreamfiber.in/sitemap.xml
