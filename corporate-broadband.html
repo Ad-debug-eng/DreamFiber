@@ -947,30 +947,34 @@
 @media (max-width: 991px) {
     .hero.corp-hero-light {
         min-height: calc(100vh - 65px) !important;
-        padding: 1.25rem 0 !important;
+        padding: 0.75rem 0 1rem 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
     }
+    .hero.corp-hero-light .hero-content,
     .hero.corp-hero-light .hero-content-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 0.5rem !important;
+        gap: 0.35rem !important;
         align-items: center !important;
         text-align: center !important;
+        width: 100% !important;
     }
     .hero.corp-hero-light .hero-side-image {
         order: 1 !important;
         display: flex !important;
         justify-content: center !important;
-        margin-bottom: 0.35rem !important;
+        margin-bottom: 0.25rem !important;
+        width: 100% !important;
     }
     .hero.corp-hero-light .hero-side-image img {
-        max-height: 135px !important;
+        max-height: 210px !important;
         width: auto !important;
-        max-width: 80% !important;
+        max-width: 90% !important;
         object-fit: contain !important;
         margin: 0 auto !important;
+        display: block !important;
     }
     .hero.corp-hero-light .hero-text {
         order: 2 !important;
@@ -980,17 +984,15 @@
         text-align: center !important;
         width: 100% !important;
     }
+    .hero.corp-hero-light .badge,
     .hero.corp-hero-light .badge-pill {
-        font-size: 0.72rem !important;
-        padding: 0.22rem 0.7rem !important;
-        margin-bottom: 0.4rem !important;
-        display: inline-flex !important;
+        display: none !important;
     }
     .hero.corp-hero-light .hero-title {
         font-size: 1.35rem !important;
         font-weight: 800 !important;
         line-height: 1.25 !important;
-        margin-top: 0 !important;
+        margin-top: 0.2rem !important;
         margin-bottom: 0.35rem !important;
         color: #002b5e !important;
     }
@@ -1177,10 +1179,7 @@
 <section class="hero corp-hero-light" style="padding: 6.5rem 0; min-height: 85vh; display: flex; align-items: center;">
     <div class="container hero-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
         <div class="hero-text">
-            <div class="badge" style="background: rgba(2, 132, 199, 0.1); color: #0284c7; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 1.15rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(2, 132, 199, 0.25);">
-                <ion-icon name="speedometer-outline" style="font-size: 1.1rem;"></ion-icon> High-Speed Business Internet
-            </div>
-            <h1 class="hero-title" style="color: #002b5e; margin-top: 1.25rem; font-size: 2.85rem; font-weight: 800; line-height: 1.2;">
+            <h1 class="hero-title" style="color: #002b5e; margin-top: 0; font-size: 2.85rem; font-weight: 800; line-height: 1.2;">
                 High-Speed Corporate Broadband Built for Modern Workplaces
             </h1>
             <p class="hero-subtitle" style="color: #475569; font-size: 1.15rem; line-height: 1.75; margin: 1.25rem 0 2rem;">
