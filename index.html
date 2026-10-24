@@ -21,6 +21,7 @@
   {
     "@context": "https://schema.org",
     "@type": [
+      "Organization",
       "InternetServiceProvider",
       "LocalBusiness"
     ],
@@ -34,7 +35,14 @@
       "Dream Broadband"
     ],
     "url": "https://dreamfiber.in/",
-    "logo": "https://dreamfiber.in/assets/images/favicon-512x512.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dreamfiber.in/assets/images/favicon-512x512.png",
+      "contentUrl": "https://dreamfiber.in/assets/images/favicon-512x512.png",
+      "width": 512,
+      "height": 512,
+      "caption": "DreamFiber Logo"
+    },
     "image": "https://dreamfiber.in/assets/images/favicon-512x512.png",
     "telephone": "+91-8788536698",
     "priceRange": "₹₹",
@@ -104,7 +112,20 @@
           "Marathi"
         ]
       }
+    ],
+    "sameAs": [
+      "https://wa.me/919272162704"
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://dreamfiber.in/#website",
+    "url": "https://dreamfiber.in/",
+    "name": "DreamFiber",
+    "publisher": {
+      "@id": "https://dreamfiber.in/#business"
+    }
   },
   {
     "@context": "https://schema.org",
@@ -166,16 +187,20 @@
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 <!-- Site Title -->
 <title>High Speed Internet in Chakan - Dream Fiber | Best WiFi & Leased Line</title>
-<!-- Favicons & App Icons (Tabs, Android, iOS, Google Search) -->
-<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<!-- Primary Google Search Favicons (Multiples of 48px square required by Google Search) -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://dreamfiber.in/assets/images/favicon-192x192.png"/>
+<link rel="icon" type="image/png" sizes="512x512" href="https://dreamfiber.in/assets/images/favicon-512x512.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://dreamfiber.in/assets/images/favicon-96x96.png"/>
+<link rel="icon" type="image/png" sizes="48x48" href="https://dreamfiber.in/assets/images/favicon-48x48.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://dreamfiber.in/assets/images/apple-touch-icon.png"/>
+<link rel="shortcut icon" href="https://dreamfiber.in/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="https://dreamfiber.in/favicon.ico"/>
+
+<!-- Browser Standard Favicons (Desktop / Mobile Tabs) -->
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" media="(prefers-color-scheme: light)"/>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)"/>
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" media="(prefers-color-scheme: light)"/>
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)"/>
-<link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png"/>
-<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png"/>
-<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png"/>
 <link rel="manifest" href="site.webmanifest"/>
 <meta name="theme-color" content="#0284c7"/>
 <script>

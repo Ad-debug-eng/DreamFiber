@@ -7,6 +7,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
+      <image:loc>https://dreamfiber.in/assets/images/favicon-512x512.png</image:loc>
+      <image:title>DreamFiber Official Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dreamfiber.in/assets/images/favicon-192x192.png</image:loc>
+      <image:title>DreamFiber App and Search Icon</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dreamfiber.in/assets/images/df-logo.png</image:loc>
       <image:title>df logo</image:title>
     </image:image>
@@ -167,9 +175,17 @@
   </url>
   <url>
     <loc>https://dreamfiber.in/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dreamfiber.in/assets/images/favicon-512x512.png</image:loc>
+      <image:title>DreamFiber Official Brand Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dreamfiber.in/assets/images/favicon-192x192.png</image:loc>
+      <image:title>DreamFiber App and Search Icon</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://dreamfiber.in/assets/images/df-logo.png</image:loc>
       <image:title>df logo</image:title>
