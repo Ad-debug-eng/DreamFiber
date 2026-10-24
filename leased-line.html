@@ -953,101 +953,86 @@
 }
 </style>
 <style>
-/* Hero Mobile Section - Single View, Balanced Typography & Buttons */
+/* Hero Mobile Section - Single View, Center Content & Hide Terminal */
 @media (max-width: 991px) {
     .hero.github-hero-bg {
         min-height: calc(100vh - 65px) !important;
-        padding: 1rem 0 1.25rem 0 !important;
+        padding: 1.5rem 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        box-sizing: border-box !important;
     }
     .hero.github-hero-bg .hero-content,
     .hero.github-hero-bg .hero-content-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 0.5rem !important;
         align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
         width: 100% !important;
+        margin: 0 auto !important;
     }
     .hero.github-hero-bg .hero-text {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
         width: 100% !important;
     }
+    .hero.github-hero-bg .hero-side-image {
+        display: none !important;
+    }
     .hero.github-hero-bg .badge,
     .hero.github-hero-bg .badge-pill {
-        font-size: 0.72rem !important;
-        padding: 0.22rem 0.7rem !important;
-        margin-bottom: 0 !important;
+        font-size: 0.8rem !important;
+        padding: 0.35rem 0.95rem !important;
+        margin-bottom: 0.85rem !important;
         display: inline-flex !important;
+        align-items: center !important;
     }
     .hero.github-hero-bg .hero-title {
-        font-size: 1.38rem !important;
+        font-size: 1.65rem !important;
         font-weight: 800 !important;
-        line-height: 1.25 !important;
-        margin-top: 1.25rem !important;
-        margin-bottom: 0.4rem !important;
+        line-height: 1.28 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.85rem !important;
         color: #ffffff !important;
+        max-width: 95% !important;
     }
     .hero.github-hero-bg .hero-subtitle {
-        font-size: 0.82rem !important;
-        line-height: 1.45 !important;
-        margin: 0 auto 0.65rem !important;
-        max-width: 94% !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        margin: 0 auto 1.5rem !important;
+        max-width: 92% !important;
         color: #cbd5e1 !important;
     }
     .hero.github-hero-bg .hero-buttons {
         display: flex !important;
         flex-direction: column !important;
-        gap: 0.45rem !important;
+        gap: 0.65rem !important;
         width: 100% !important;
-        max-width: 290px !important;
+        max-width: 300px !important;
         margin: 0 auto !important;
         align-items: stretch !important;
     }
     .hero.github-hero-bg .hero-buttons .btn-primary {
         width: 100% !important;
-        padding: 0.55rem 1.25rem !important;
-        font-size: 0.88rem !important;
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.95rem !important;
         font-weight: 700 !important;
         border-radius: 8px !important;
         text-align: center !important;
     }
     .hero.github-hero-bg .hero-buttons .btn-outline {
         width: 100% !important;
-        padding: 0.55rem 1.25rem !important;
-        font-size: 0.88rem !important;
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.95rem !important;
         font-weight: 600 !important;
         border-radius: 8px !important;
         text-align: center !important;
         justify-content: center !important;
-    }
-    .hero.github-hero-bg .hero-side-image {
-        margin-top: 0.5rem !important;
-        width: 100% !important;
-        max-width: 320px !important;
-    }
-    .hero.github-hero-bg .dashboard-container {
-        padding: 0.55rem 0.75rem !important;
-        border-radius: 10px !important;
-    }
-    .hero.github-hero-bg .dashboard-header {
-        margin-bottom: 0.25rem !important;
-        font-size: 0.65rem !important;
-    }
-    .hero.github-hero-bg .dashboard-metrics {
-        font-size: 0.65rem !important;
-        gap: 0.2rem !important;
-    }
-    .hero.github-hero-bg .dashboard-metrics p {
-        display: none !important;
-    }
-    .hero.github-hero-bg .dashboard-footer {
-        display: none !important;
     }
 }
 </style>
