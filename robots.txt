@@ -1,13 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /assets/images/
-Allow: /assets/docs/
-Allow: /favicon.ico
 
-User-agent: Googlebot-Image
-Allow: /
-Allow: /favicon.ico
-Allow: /assets/images/
-
-# Search Engine Sitemap Index
 Sitemap: https://dreamfiber.in/sitemap.xml
