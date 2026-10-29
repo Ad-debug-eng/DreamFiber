@@ -3,9 +3,17 @@ __pycache__/
 .DS_Store
 
 # Temporary test screenshots and scratch scripts
+portal-worker/
+.wrangler/
+node_modules/
+*.bat
 /*.png
 /*.bak
 /*.py
 !gen_sitemap.py
 !seo_check.py
 !serve_nocache.py
+ 
+dashboard_elements.json
+portal_test.html
+scratch/
