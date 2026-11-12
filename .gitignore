@@ -27,6 +27,12 @@ scratch/
 key.properties
 google-services.json
 GoogleService-Info.plist
+app/local.properties
 app/build/
+app/app/build/
 app/.gradle/
+app/.kotlin/
 app/.dart_tool/
+!app/gradlew.bat
+*.apk
+*.aab

@@ -1,10 +1,25 @@
 # DreamFiber Mobile App (`app/`)
 
-This directory holds the DreamFiber Customer Self-Care Mobile Application (Android / iOS).
+This directory contains the native **Android (Kotlin + Jetpack Compose)** DreamFiber Customer Self-Care Application (`in.dreamfiber.app`), built against Android SDK 34 with ProGuard/R8 hardening, TLS Certificate Pinning, Android Keystore `EncryptedSharedPreferences`, Firebase Cloud Messaging (`BigPictureStyle` rich image support), Biometric Unlock, UPI Intent (`GPay`/`PhonePe`/`Paytm`/`BHIM`), and foreground Location/ISP/Device telemetry.
+
+## Quick Setup for Push Notifications & Play Store Release
+1. **Lock-Screen Rich Image Push (Firebase Cloud Messaging):**
+   - Create a free project in Firebase Console and register Android package `in.dreamfiber.app`.
+   - Download `google-services.json` and place it at [`app/google-services.json`](./app/google-services.json) (automatically ignored by `.gitignore`; Gradle applies the Google Services plugin automatically when present).
+   - Generate a Firebase Service Account JSON key (`Project Settings → Service accounts → Generate new private key`) and upload it securely to the Cloudflare Worker (never inside the APK):
+     ```powershell
+     cd ../website/portal-worker
+     Get-Content path\to\firebase-service-account.json -Raw | npx wrangler secret put FCM_SERVICE_ACCOUNT_JSON
+     ```
+2. **Admin Telemetry & Notification Center:**
+   - Access live customer locations (with Google Maps links), ISP checks, CSV/Excel exports, Festival/Offer image push broadcasts, and configurable Pre/Post-Expiry schedules at **`https://pay.dreamfiber.in/admin`**.
+   - Change your admin password anytime via `npx wrangler secret put ADMIN_PASSWORD`.
+3. **Play Store Release Signing:**
+   - Generate a private upload keystore (kept outside Git) and sign the release bundle with `./gradlew.bat bundleRelease`.
 
 > **Project Structure**
-> - [`../website/`](../website/): DreamFiber main static website (`dreamfiber.in`) & Cloudflare Worker payment portal (`pay.dreamfiber.in`).
-> - [`./`](./): DreamFiber mobile application source, assets, and notification planning.
+> - [`../website/`](../website/): DreamFiber main static website (`dreamfiber.in`), Account Deletion page (`delete-account.html`), & Cloudflare Worker (`pay.dreamfiber.in`, `/admin`, D1 telemetry DB, daily Cron).
+> - [`./`](./): Native Android Kotlin/Compose project (`app/`).
 
 ---
 

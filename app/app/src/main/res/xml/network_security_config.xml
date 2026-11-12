@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Block all unencrypted HTTP traffic across the entire app -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Only trust system CAs in release; user-installed MITM proxy certs are blocked -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Pin active Cloudflare / Let's Encrypt & GTS Root CAs for DreamFiber endpoints -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">dreamfiber.in</domain>
+        <pin-set expiration="2028-01-01">
+            <!-- Active pay.dreamfiber.in Leaf SPKI -->
+            <pin digest="SHA-256">DPHIXxcFJ9uNWbeYX9F5Rx14ycF2ivZeQRmrIxENiNw=</pin>
+            <!-- ISRG Root X2 (Active Chain Root) & ISRG Root X1 -->
+            <pin digest="SHA-256">diGVwiVYbubAI3RW4hB9xU8e/CH2GnkuvVFZE8zmgzI=</pin>
+            <pin digest="SHA-256">C5+lpZ7tcVwmwQIMcRtPbsQtWLABXhQzejna0wHFr8M=</pin>
+            <!-- Google Trust Services Root R1 & R4 (Cloudflare Backup Roots) -->
+            <pin digest="SHA-256">hxqRlPTu1bMS/0DITB1SSu0vd4u/8l8TjPgfaAp63Gc=</pin>
+            <pin digest="SHA-256">mEflZT5enoR1FuXLgYYGqnVEoZvmf9c2bVBpiOjYQ0c=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

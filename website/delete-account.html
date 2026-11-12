@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<link rel="canonical" href="https://dreamfiber.in/delete-account.html"/>
+<meta name="description" content="Request deletion of DreamFiber mobile app data, location history, and push notification tokens."/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<title>Account &amp; App Data Deletion | DreamFiber</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link href="https://trendynet.pages.dev/assets/plugins/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://trendynet.pages.dev/assets/plugins/css/uicons.css" rel="stylesheet"/>
+<link href="https://trendynet.pages.dev/style.css" rel="stylesheet"/>
+<style>
+  body { background: #f8fafc; color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .del-hero { background: linear-gradient(135deg, #002b5e 0%, #0052cc 100%); color: #fff; padding: 52px 20px 44px; text-align: center; }
+  .del-hero h1 { font-size: 32px; font-weight: 800; color: #fff; margin: 0 0 10px; }
+  .del-hero p { max-width: 660px; margin: 0 auto; color: #e2e8f0; font-size: 15px; }
+  .del-card { max-width: 720px; margin: -24px auto 50px; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 12px 35px rgba(15,23,42,0.08); border: 1px solid #e2e8f0; }
+  .del-card h2 { font-size: 19px; font-weight: 700; color: #002b5e; margin-top: 22px; margin-bottom: 10px; }
+  .del-card label { display: block; font-size: 13px; font-weight: 700; color: #334155; margin: 12px 0 6px; }
+  .del-card input, .del-card textarea, .del-card select { width: 100%; padding: 11px 13px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 14.5px; }
+  .del-btn { width: 100%; margin-top: 18px; padding: 13px; border: none; border-radius: 10px; background: #dc2626; color: #fff; font-weight: 700; font-size: 15px; cursor: pointer; }
+  .del-btn:hover { background: #b91c1c; }
+  .del-status { margin-top: 16px; padding: 14px; border-radius: 10px; display: none; font-size: 14px; }
+  .del-note { background: #f8fafc; border-left: 4px solid #0072f0; padding: 12px 14px; border-radius: 8px; font-size: 13.5px; color: #475569; margin: 14px 0; }
+  .custom-footer { background: #0f172a; color: #cbd5e1; padding: 26px 20px; text-align: center; font-size: 13.5px; }
+  .custom-footer a { color: #38bdf8; text-decoration: none; margin: 0 8px; }
+</style>
+</head>
+<body>
+<section class="del-hero">
+  <h1>Account &amp; App Data Deletion</h1>
+  <p>Dream Cable and Internet Services Private Limited (DreamFiber)</p>
+</section>
+
+<main class="container" style="padding: 0 16px;">
+  <div class="del-card">
+    <p style="font-size: 15px; line-height: 1.6;">
+      Subscribers of the <strong>DreamFiber</strong> mobile application and customer portal (<code>pay.dreamfiber.in</code>) may request permanent erasure of their app profile, cached credentials, location verification telemetry, and push notification tokens at any time using the form below or inside the app under <strong>Settings &rarr; Privacy &amp; Data Settings</strong>.
+    </p>
+
+    <div class="del-note">
+      <strong>What is deleted vs. retained:</strong>
+      <ul style="margin: 8px 0 0 18px; padding: 0;">
+        <li><strong>Deleted:</strong> App telemetry logs, recorded GPS coordinates, Wi-Fi diagnostic identifiers, device metadata, and Firebase push notification tokens (typically immediately for verified sessions or within 7 business days).</li>
+        <li><strong>Retained by Law:</strong> Statutory broadband subscriber KYC, tax invoices, and Department of Telecommunications (DoT) / TRAI mandated IP logs must be retained for the legally prescribed duration under Indian telecom regulations before scheduled deletion.</li>
+      </ul>
+    </div>
+
+    <h2>Submit Deletion Request</h2>
+    <form id="delForm">
+      <label for="d-user">Customer Username / Subscriber ID *</label>
+      <input id="d-user" type="text" required placeholder="e.g. Advait001"/>
+
+      <label for="d-mob">Registered Mobile Number *</label>
+      <input id="d-mob" type="tel" required placeholder="e.g. 98XXXXXXXX"/>
+
+      <label for="d-reason">Reason (Optional)</label>
+      <textarea id="d-reason" rows="3" placeholder="e.g. Removing app data / Discontinued broadband connection"></textarea>
+
+      <button id="d-btn" type="submit" class="del-btn">Submit Deletion Request</button>
+    </form>
+    <div id="d-msg" class="del-status"></div>
+
+    <h2>Alternative Contact Channels</h2>
+    <p style="font-size: 14px; color: #475569;">
+      You may also email <a href="mailto:dreamfiber.contact@gmail.com">dreamfiber.contact@gmail.com</a> from your registered email with subject <em>"Account Data Deletion - [Your Username]"</em> or call Customer Care at <strong>+91 87885 36698</strong> / <strong>+91 92281 72558</strong>.
+    </p>
+  </div>
+</main>
+
+<footer class="custom-footer">
+  <p>&copy; 2026 Dream Cable and Internet Services Private Limited (DreamFiber).</p>
+  <div>
+    <a href="index.html">Home</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="refunds.html">Refunds</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="pricing.html">Plans (INR)</a> |
+    <a href="contact.html">Contact Us</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('delForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('d-btn');
+  var box = document.getElementById('d-msg');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  box.style.display = 'none';
+  try {
+    var res = await fetch('https://pay.dreamfiber.in/api/account-deletion', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: document.getElementById('d-user').value.trim(),
+        mobile: document.getElementById('d-mob').value.trim(),
+        reason: document.getElementById('d-reason').value.trim(),
+        source: 'website'
+      })
+    });
+    var data = await res.json();
+    box.style.display = 'block';
+    if (res.ok && data.success) {
+      box.style.background = '#dcfce7';
+      box.style.color = '#15803d';
+      box.innerHTML = '<strong>Request Submitted (Ticket: ' + data.ticket_id + ')</strong><br/>' + data.message;
+      document.getElementById('delForm').reset();
+    } else {
+      box.style.background = '#fee2e2';
+      box.style.color = '#b91c1c';
+      box.textContent = data.error || 'Unable to submit request. Please try again.';
+    }
+  } catch (err) {
+    box.style.display = 'block';
+    box.style.background = '#fee2e2';
+    box.style.color = '#b91c1c';
+    box.textContent = 'Network error. Please email dreamfiber.contact@gmail.com directly.';
+  }
+  btn.disabled = false;
+  btn.textContent = 'Submit Deletion Request';
+});
+</script>
+</body>
+</html>
