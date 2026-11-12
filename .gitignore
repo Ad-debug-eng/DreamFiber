@@ -4,16 +4,29 @@ __pycache__/
 
 # Temporary test screenshots and scratch scripts
 portal-worker/
+website/portal-worker/
 .wrangler/
 node_modules/
 *.bat
 /*.png
 /*.bak
 /*.py
-!gen_sitemap.py
-!seo_check.py
-!serve_nocache.py
- 
+!website/gen_sitemap.py
+!website/seo_check.py
+!website/serve_nocache.py
+
 dashboard_elements.json
 portal_test.html
 scratch/
+
+# App build & secret credentials (never commit signing keys or service configs)
+.env
+.env.*
+*.keystore
+*.jks
+key.properties
+google-services.json
+GoogleService-Info.plist
+app/build/
+app/.gradle/
+app/.dart_tool/
