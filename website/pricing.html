@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 <!-- Google SEO & Meta Tags -->
 <link rel="canonical" href="https://dreamfiber.in/pricing.html"/>
-<meta name="description" content="Official products, services and broadband plan pricing in Indian Rupees (INR / ₹) for DreamFiber (Dream Cable and Internet Services Private Limited). Fast fiber broadband, OTT and IPTV."/>
+<meta name="description" content="Official products, services and broadband plan pricing in Indian Rupees (INR / â‚¹) for DreamFiber (Dream Cable and Internet Services Private Limited). Fast fiber broadband, OTT and IPTV."/>
 <meta property="og:site_name" content="DreamFiber"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Products, Services &amp; Pricing (INR) | DreamFiber"/>
-<meta property="og:description" content="Official products, services and broadband plan pricing in Indian Rupees (INR / ₹) for DreamFiber (Dream Cable and Internet Services Private Limited)."/>
+<meta property="og:description" content="Official products, services and broadband plan pricing in Indian Rupees (INR / â‚¹) for DreamFiber (Dream Cable and Internet Services Private Limited)."/>
 <meta property="og:url" content="https://dreamfiber.in/pricing.html"/>
 <meta property="og:image" content="https://dreamfiber.in/assets/images/favicon-512x512.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Products, Services &amp; Pricing (INR) | DreamFiber"/>
-<meta name="twitter:description" content="Official products, services and broadband plan pricing in Indian Rupees (INR / ₹)."/>
+<meta name="twitter:description" content="Official products, services and broadband plan pricing in Indian Rupees (INR / â‚¹)."/>
 <meta name="twitter:image" content="https://dreamfiber.in/assets/images/favicon-512x512.png"/>
 
 <!-- Schema.org Structured Data -->
@@ -83,7 +83,8 @@
     border-radius: 8px; padding: 10px 0; list-style: none; text-align: left;
   }
   .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-  .nav-dropdown-menu li { margin: 0 !important; padding: 0 !important; }
+  .nav-dropdown-menu li { display: block !important; width: 100% !important; float: none !important; margin: 0 !important; padding: 0 !important; }
+.nav-dropdown-menu li a::before, .nav-dropdown-menu li a::after { display: none !important; content: none !important; }
   .nav-dropdown-menu li a {
     display: block !important; padding: 8px 20px !important; color: #002b5e !important;
     font-size: 15px !important; font-weight: 500 !important; text-transform: none !important;
@@ -114,127 +115,146 @@
 
   /* Hero Section */
   .pricing-hero {
-    background: linear-gradient(135deg, #002b5e 0%, #0f172a 100%);
-    padding: 3.5rem 0 3rem;
+    background: linear-gradient(135deg, #002b5e 0%, #001738 100%);
+    padding: 3rem 0 4.25rem;
     color: #ffffff;
     text-align: center;
   }
   .pricing-badge {
     display: inline-block;
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 0.35rem 1rem;
+    background: rgba(255, 73, 73, 0.16);
+    color: #ff8585;
+    border: 1px solid rgba(255, 73, 73, 0.38);
+    padding: 0.32rem 0.95rem;
     border-radius: 50px;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.75px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
   }
-  .pricing-hero h1 { font-size: 2.4rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem; }
-  .pricing-hero p { color: #cbd5e1; font-size: 1rem; max-width: 680px; margin: 0 auto; line-height: 1.6; }
+  .pricing-hero h1 { font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.65rem; }
+  .pricing-hero p { color: #cbd5e1; font-size: 0.98rem; max-width: 660px; margin: 0 auto; line-height: 1.6; }
 
-  /* Pricing Cards Grid */
+  /* Pricing Content Container */
   .pricing-wrapper {
-    max-width: 1200px;
-    margin: -2rem auto 4rem;
+    max-width: 1140px;
+    margin: -2.25rem auto 4rem;
     padding: 0 15px;
     position: relative;
     z-index: 2;
   }
   .inr-currency-banner {
-    background: #eff6ff;
-    border: 1.5px solid #93c5fd;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #ff4949;
     border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 2.5rem;
+    padding: 1.15rem 1.5rem;
+    margin-bottom: 2.25rem;
+    box-shadow: 0 8px 24px rgba(0, 43, 94, 0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.25rem;
   }
-  .inr-banner-text strong { color: #1e3a8a; font-size: 1.05rem; }
-  .inr-banner-text p { color: #3b82f6; margin: 0; font-size: 0.9rem; }
+  @media (max-width: 767px) {
+    .inr-currency-banner { flex-direction: column; align-items: flex-start; }
+  }
+  .inr-banner-text strong { color: #002b5e; font-size: 1rem; display: inline-block; margin-bottom: 2px; }
+  .inr-banner-text p { color: #475569; margin: 0; font-size: 0.88rem; line-height: 1.55; }
   .inr-tag {
-    background: #0072f0;
+    background: #002b5e;
     color: #ffffff;
-    padding: 0.35rem 0.85rem;
+    padding: 0.45rem 1rem;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .section-title-bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-title-bar h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #002b5e;
+    margin: 0;
+  }
+  .section-title-bar span {
+    font-size: 0.88rem;
+    color: #64748b;
+    font-weight: 500;
   }
 
   .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
+    align-items: stretch;
+  }
+  @media (max-width: 991px) {
+    .plans-grid { grid-template-columns: 1fr; }
   }
   .plan-card {
     background: #ffffff;
-    border: 1.5px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 2rem 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 6px 20px rgba(0, 43, 94, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     position: relative;
   }
   .plan-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
-    border-color: #0072f0;
+    box-shadow: 0 12px 28px rgba(0, 43, 94, 0.1);
+    border-color: #002b5e;
   }
   .plan-card.popular {
-    border-color: #0072f0;
-    border-width: 2px;
+    border: 2px solid #002b5e;
+    box-shadow: 0 10px 28px rgba(0, 43, 94, 0.09);
   }
   .popular-tag {
     position: absolute;
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    background: #ff4949;
     color: #ffffff;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.75px;
-    padding: 0.25rem 0.85rem;
+    padding: 0.25rem 0.9rem;
     border-radius: 50px;
+    white-space: nowrap;
   }
-  .plan-header { margin-bottom: 1.25rem; }
-  .plan-name { font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 0.2rem; }
-  .plan-speed { font-size: 2rem; font-weight: 800; color: #0072f0; }
-  .plan-price-main {
-    margin: 1.25rem 0 1rem;
-    padding-bottom: 1.25rem;
+  .plan-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid #f1f5f9;
   }
-  .plan-currency { font-size: 1.4rem; font-weight: 700; color: #0f172a; vertical-align: top; }
-  .plan-amount { font-size: 2.5rem; font-weight: 800; color: #0f172a; line-height: 1; }
-  .plan-period { font-size: 0.9rem; color: #64748b; font-weight: 500; }
-
-  .tenure-table {
-    width: 100%;
-    margin-bottom: 1.25rem;
-    font-size: 0.85rem;
-    border-collapse: collapse;
-  }
-  .tenure-table td {
-    padding: 5px 0;
-    color: #475569;
-    border-bottom: 1px dashed #f1f5f9;
-  }
-  .tenure-table td:last-child {
-    text-align: right;
+  .plan-category {
+    display: inline-block;
+    font-size: 0.72rem;
     font-weight: 700;
-    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #ff4949;
+    margin-bottom: 0.35rem;
   }
+  .plan-name { font-size: 1.2rem; font-weight: 800; color: #002b5e; margin-bottom: 0.25rem; line-height: 1.3; }
+  .plan-speed { font-size: 1.05rem; font-weight: 700; color: #334155; line-height: 1.35; }
 
   .plan-features-list {
     list-style: none;
@@ -245,12 +265,13 @@
   .plan-features-list li {
     font-size: 0.88rem;
     color: #334155;
-    padding: 6px 0;
+    padding: 7px 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
+    line-height: 1.4;
   }
-  .plan-features-list li svg { flex-shrink: 0; color: #16a34a; }
+  .plan-features-list li svg { flex-shrink: 0; color: #002b5e; }
   
   .btn-pay-now {
     display: block;
@@ -259,13 +280,15 @@
     background: #002b5e;
     color: #ffffff;
     font-weight: 700;
-    font-size: 0.92rem;
-    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    padding: 0.78rem 1rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: background 0.2s ease, transform 0.15s ease;
   }
-  .btn-pay-now:hover { background: #0072f0; color: #ffffff; }
+  .btn-pay-now:hover { background: #ff4949; color: #ffffff; }
+  .plan-card.popular .btn-pay-now { background: #ff4949; }
+  .plan-card.popular .btn-pay-now:hover { background: #002b5e; }
 
   /* Services Table Section */
   .services-section {
@@ -285,22 +308,22 @@
     margin-bottom: 1.5rem;
   }
   .pricing-table th {
-    background: #f8fafc;
-    color: #0f172a;
-    font-size: 0.9rem;
+    background: #002b5e;
+    color: #ffffff;
+    font-size: 0.88rem;
     font-weight: 700;
     padding: 12px 16px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #002b5e;
     text-align: left;
   }
   .pricing-table td {
     padding: 12px 16px;
     border: 1px solid #e2e8f0;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     color: #334155;
   }
   .pricing-table tr:hover td { background: #f8fafc; }
-  .price-highlight { font-weight: 700; color: #0072f0; }
+  .price-highlight { font-weight: 700; color: #002b5e; }
 
   /* Custom Footer */
   footer.custom-footer {
@@ -387,7 +410,7 @@
             </li>
             <li><a href="ott.html">OTTs</a></li>
             <li><a href="iptv.html">IPTV</a></li>
-            <li class="nav-dropdown active">
+            <li class="nav-dropdown">
               <a href="#">Support</a>
               <ul class="nav-dropdown-menu">
                 <li><a href="about.html">About Us</a></li>
@@ -468,7 +491,7 @@
                   </li>
                   <li><a href="ott.html">OTTs</a></li>
                   <li><a href="iptv.html">IPTV</a></li>
-                  <li class="nav-dropdown active">
+                  <li class="nav-dropdown">
                     <a href="#">Support</a>
                     <ul class="nav-dropdown-menu">
                       <li><a href="about.html">About Us</a></li>
@@ -520,19 +543,23 @@
   </div>
 
   <!-- Section 1: Service Categories Overview (No Public Tariff Cards) -->
-  <h2 style="font-size: 1.6rem; font-weight: 800; color: #002b5e; margin-bottom: 1.5rem;">Available Connectivity Tiers</h2>
+  <div class="section-title-bar">
+    <h2>Available Connectivity Tiers</h2>
+    <span>Log in to pay.dreamfiber.in for your area-specific tariff</span>
+  </div>
   <div class="plans-grid">
 
     <div class="plan-card">
       <div class="plan-header">
+        <span class="plan-category">Residential FTTH</span>
         <div class="plan-name">Home Fiber Broadband</div>
-        <div class="plan-speed">50 Mbps &ndash; 300 Mbps</div>
+        <div class="plan-speed">50 &ndash; 300 Mbps Symmetric</div>
       </div>
-      <ul class="plan-features-list" style="margin-top: 1rem;">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>High-Speed FTTH Connectivity</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>1 / 3 / 6 / 12 Month Prepaid Cycles (INR)</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Symmetric Upload &amp; Download</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct Local Chakan Support</li>
+      <ul class="plan-features-list">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>High-Speed Optical Fiber Access</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>1 / 3 / 6 / 12 Month INR Cycles</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Equal Upload &amp; Download Speeds</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct Local Chakan Support</li>
       </ul>
       <a href="contact.html" class="btn-pay-now">Check Availability &amp; Rates</a>
     </div>
@@ -540,28 +567,30 @@
     <div class="plan-card popular">
       <span class="popular-tag">Most Requested</span>
       <div class="plan-header">
+        <span class="plan-category">Home Entertainment</span>
         <div class="plan-name">Broadband + OTT &amp; IPTV</div>
-        <div class="plan-speed">Fiber + 20+ Apps / TV</div>
+        <div class="plan-speed">Fiber + 20+ Apps &amp; TV</div>
       </div>
-      <ul class="plan-features-list" style="margin-top: 1rem;">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>20+ Entertainment OTT Apps</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>450+ Live HD &amp; SD IPTV Channels</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Flexible Prepaid INR Billing</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Single Portal Activation &amp; Renewal</li>
+      <ul class="plan-features-list">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>20+ Entertainment OTT Apps</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>450+ Live HD &amp; SD IPTV Channels</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Flexible Prepaid INR Billing</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Single Portal Activation &amp; Renewal</li>
       </ul>
       <a href="https://pay.dreamfiber.in/" class="btn-pay-now">Log In to View Your Plan</a>
     </div>
 
     <div class="plan-card">
       <div class="plan-header">
+        <span class="plan-category">Commercial &amp; Enterprise</span>
         <div class="plan-name">Business &amp; Leased Line</div>
-        <div class="plan-speed">Up to 1 Gbps Dedicated</div>
+        <div class="plan-speed">Up to 1 Gbps Dedicated ILL</div>
       </div>
-      <ul class="plan-features-list" style="margin-top: 1rem;">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>1:1 Symmetric ILL Bandwidth</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Static IP Blocks &amp; Dual-Ring Fiber</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom Commercial INR Contracts</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated Priority SLA Dispatch</li>
+      <ul class="plan-features-list">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>1:1 Uncontended ILL Bandwidth</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Static IP Blocks &amp; Dual-Ring Fiber</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom Commercial INR Contracts</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated Priority SLA Dispatch</li>
       </ul>
       <a href="contact.html" class="btn-pay-now">Request Custom Quote</a>
     </div>
@@ -625,7 +654,7 @@
     </div>
 
     <div style="font-size: 0.85rem; color: #64748b; line-height: 1.6; margin-top: 1rem;">
-      * Note: Goods and Services Tax (GST 18%) applies as per statutory Government of India regulations. Existing subscribers can view their exact personalized renewal tariff in INR inside <a href="https://pay.dreamfiber.in/" style="color: #0072f0; font-weight: 600;">pay.dreamfiber.in</a>. New connection applicants can call <strong>+91 87885 36698</strong> / <strong>+91 92281 72558</strong> for area-specific plan details.
+      * Note: Goods and Services Tax (GST 18%) applies as per statutory Government of India regulations. Existing subscribers can view their exact personalized renewal tariff in INR inside <a href="https://pay.dreamfiber.in/" style="color: #ff4949; font-weight: 700;">pay.dreamfiber.in</a>. New connection applicants can call <strong>+91 87885 36698</strong> / <strong>+91 92281 72558</strong> for area-specific plan details.
     </div>
   </div>
 </main>
