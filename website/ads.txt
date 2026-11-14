@@ -1,0 +1,26 @@
+# ==============================================================================
+# DreamFiber Authorized Digital Sellers (ads.txt v1.1)
+# Operating Entity: Dream Cable and Internet Services Private Limited
+# Registered Office: Near Axis Bank ATM, At Post Nighoje Gaon, Chakan, Pune - 410501, Maharashtra, India
+# Domain: dreamfiber.in
+# Subdomains: pay.dreamfiber.in
+# Standard: IAB Tech Lab Authorized Digital Sellers Specification Version 1.1
+#
+# INSTRUCTIONS:
+# 1. Replace 'pub-XXXXXXXXXXXXXXXX' with your verified 16-digit Google AdSense /
+#    Google Ad Manager publisher account ID (e.g., pub-1234567890123456).
+# 2. Field 2 must strictly omit the 'ca-' prefix.
+# 3. Maintain encoding as clean UTF-8 WITHOUT Byte Order Mark (BOM).
+# ==============================================================================
+
+# Contact Directives
+contact=mailto:compliance@dreamfiber.in
+contact=https://dreamfiber.in/contact.html
+
+# Inventory Ownership & Subdomain Directives (IAB Tech Lab v1.1)
+ownerdomain=dreamfiber.in
+subdomain=pay.dreamfiber.in
+
+# Authorized Advertising Systems
+# Format: <Exchange Domain>, <Publisher ID>, <Relationship>, <Certification Authority ID>
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
