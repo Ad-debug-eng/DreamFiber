@@ -23,4 +23,4 @@ subdomain=pay.dreamfiber.in
 
 # Authorized Advertising Systems
 # Format: <Exchange Domain>, <Publisher ID>, <Relationship>, <Certification Authority ID>
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-9601589842057185, DIRECT, f08c47fec0942fa0
